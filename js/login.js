@@ -13,7 +13,7 @@ $('.login').on('submit', function(e) {
     setTimeout(function() {
       $state.html('Log in');
       $this.removeClass('ok loading');
-        window.location.href = './index.html';
+        window.location.href ='index.html'
       working = false;
     }, 4000);
   }, 3000);
