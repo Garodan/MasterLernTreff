@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="lernTreff">
+<html ng-app="lernTreff" lang="de">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
@@ -13,7 +13,9 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -32,7 +34,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Übersicht <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#">&Uuml;bersicht <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Link</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -74,12 +76,6 @@
                 <div id="overview" class="col-sm-4 col-md-3 animated bounceInUp">
                     <h2>Dein Kalender</h2>
 
-                   <!-- <h5>
-                        <a data-toggle="collapse" href="#collapseTwo">
-                            <i class="fa fa-cal fa-fw"></i>Calendars you Follow
-                        </a>
-                    </h5> -->
-
                     <div id="collapseTwo" class="collapse in">
                         <div class="list-group">
                             <div class="list-group-item">
@@ -90,6 +86,13 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+
+
+
+
                         <!--<div id="course_1" class="collapse">
 
                                     <div class="checkbox">
@@ -105,14 +108,8 @@
                         </label>
                                                  </div>
                                   </div> -->
-                        <!--start second class 
+                        <!--start second class -->
 
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="">
-                                <a href="#course_2" data-toggle="collapse" class="text-info"><strong>MKTG 361</strong></a>
-                            </label><span class="badge pull-right">1</span>
-                        </div> -->
                         <div id="course_2" class="collapse">
                             <hr style="margin:10px auto;">
                             <div class="checkbox">
@@ -128,7 +125,7 @@
                 </div>
                 <!-- End Column -->
                 <div id="calendar" class="col-sm-8 col-md-9 animated animated-sm bounceInUp">
-                    <h2>Calendar <small>plan it</small><i class="fa fa-plus fa-fw pull-right small btn btn-block"></i></h2>
+                    <!-- <h2>Kalender <small></small><i class="fa fa-plus fa-fw pull-right small btn btn-block"></i></h2> -->
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="calendar fc fc-ltr">
@@ -146,7 +143,7 @@
                                                 </div> <span class="fc-button fc-button-prev fc-state-default fc-corner-left" unselectable="on"><span class="fc-text-arrow">‹</span></span> <span class="fc-button fc-button-next fc-state-default fc-corner-right" unselectable="on"><span class="fc-text-arrow">›</span></span> <span class="fc-header-space"></span><span class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right fc-state-disabled" unselectable="on">today</span>
                                             </td>
                                             <td class="fc-header-center">
-                                                <span class="fc-header-title">          <h2>January 2014</h2>          </span>
+                                                <span class="fc-header-title">          <h2>November 2016</h2>          </span>
                                             </td>
                                             <td class="fc-header-right">
                                                 <span class="fc-button fc-button-month fc-state-default fc-corner-left fc-state-active" unselectable="on">month</span><span class="fc-button fc-button-agendaWeek fc-state-default" unselectable="on">week</span><span class="fc-button fc-button-agendaDay fc-state-default fc-corner-right" unselectable="on">day</span>
