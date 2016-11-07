@@ -5,7 +5,7 @@ font-family:"open sans", serif ;
    font-size:12px;}
 .center-menu ul li i{font-size:10px; color:#ccc; padding-right:5px;}
  
-.center-menu ul li a{color:#f4f4f4; display:block; text-decoration:none; width:100%;}
+.center-menu ul li a{color:#4f4f4f; display:block; text-decoration:none; width:100%;}
 .center-menu ul li:nth-child(1){border-right: 5px solid #8d54a3}
 .center-menu ul li:nth-child(2){border-right: 5px solid #6CC437}
 .center-menu ul li:nth-child(3){border-right: 5px solid #f28c1d}
