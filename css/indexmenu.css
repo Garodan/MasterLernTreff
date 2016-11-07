@@ -1,8 +1,9 @@
-.main-menu{margin:10px auto; float:none;}*/
+.main-menu{margin:10px auto; float:none;}
 .center-menu ul{width:100%; padding-left:0;}
 .center-menu ul li{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
 font-family:"open sans", serif ;
    font-size:12px;}
+
 .center-menu ul li i{font-size:10px; color:#ccc; padding-right:5px;}
  
 .center-menu ul li a{color:#4f4f4f; display:block; text-decoration:none; width:100%;}

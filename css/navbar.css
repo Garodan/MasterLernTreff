@@ -2,24 +2,27 @@ body{
     background: #E13D4C;
 }
 .navbar, .dropdown-menu{
-background:rgba(255,255,255,0.25);
+background: #4f4f4f;
 border: none;
 z-index: 99;
 }
 
 .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
   border-bottom: 3px solid transparent;
+  
 }
 .nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
   border-bottom: 3px solid transparent;
-  background: none;
+  background: none;  
 }
 .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
  color: #fff;
 }
 .dropdown-menu{
       -webkit-box-shadow: none;
+    background: 4f4f4f9;
     box-shadow:none;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
@@ -45,6 +48,39 @@ z-index: 99;
 }
 .nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
   border-bottom: #62C2E4 3px solid;
+}
+
+.dropdown-menu li:hover:nth-child(8n+1), .dropdown-menu  li.active:nth-child(8n+1){
+  border-bottom: #C4E17F 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+2), .dropdown-menu  li.active:nth-child(8n+2){
+  border-bottom: #F7FDCA 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+3), .dropdown-menu  li.active:nth-child(8n+3){
+  border-bottom: #FECF71 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+4), .dropdown-menu  li.active:nth-child(8n+4){
+  border-bottom: #F0776C 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+5), .dropdown-menu  li.active:nth-child(8n+5){
+  border-bottom: #DB9DBE 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+6), .dropdown-menu  li.active:nth-child(8n+6){
+  border-bottom: #C49CDE 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+7), .dropdown-menu  li.active:nth-child(8n+7){
+  border-bottom: #669AE1 3px solid;
+  border-radius: 0px 0px 15px 15px;
+}
+.dropdown-menu  li:hover:nth-child(8n+8), .dropdown-menu  li.active:nth-child(8n+8){
+  border-bottom: #62C2E4 3px solid;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .navbar-toggle .icon-bar{
