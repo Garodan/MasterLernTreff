@@ -1,4 +1,4 @@
-.center-menu{margin:30px auto; float:none;}
+.main-menu{margin:10px auto; float:none;}*/
 .center-menu ul{width:100%; padding-left:0;}
 .center-menu ul li{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
 font-family:"open sans", serif ;
@@ -28,9 +28,6 @@ font-family:"open sans", serif ;
 .center-menu ul li:nth-child(20){border-right: 5px solid #F46652}
 .center-menu ul li:nth-child(21){border-right: 5px solid #FABE09}
 
-
-
-
 .center-menu ul li:hover a{color:#fff; text-decoration:none;}
 .center-menu ul li:nth-child(1):hover{background-color:#8d54a3}
 .center-menu ul li:nth-child(2):hover{background-color:#6CC437}
@@ -53,3 +50,9 @@ font-family:"open sans", serif ;
 .center-menu ul li:nth-child(19):hover{background-color:#00B0F0}
 .center-menu ul li:nth-child(20):hover{background-color:#F46652}
 .center-menu ul li:nth-child(21):hover{background-color:#FABE09}
+
+
+
+.center-menu p{width:100%; padding-left:0; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
+font-family:"open sans", serif ;
+   font-size:12px;}
