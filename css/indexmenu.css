@@ -51,8 +51,6 @@ font-family:"open sans", serif ;
 .center-menu ul li:nth-child(20):hover{background-color:#F46652}
 .center-menu ul li:nth-child(21):hover{background-color:#FABE09}
 
-
-
-.center-menu p{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
+.center-menu ul p{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
 font-family:"open sans", serif ;
    font-size:12px;}
