@@ -1,5 +1,5 @@
 var working = false;
-$('.login').on('submit', function (e) {
+$('.login').on('submit', function(e) {
     e.preventDefault();
     if (working) return;
     working = true;
@@ -7,7 +7,28 @@ $('.login').on('submit', function (e) {
       $state = $this.find('button > .state');
     $this.addClass('loading');
     $state.html('Authentifizierung');
+    setTimeout(function() {
+        $this.addClass('ok');
+        $state.html('Willkommen beim LernTreff');
+        setTimeout(function() {
+            $state.html('Log in');
+            $this.removeClass('ok loading');
+            window.location.href = './index.html';
+            working = false;
+        }, 4000);
+    }, 3000);
+});
 
+/*var working = false;
+$('.login').on('submit', function (e) {
+    e.preventDefault();
+    if (working) return;
+    working = true;
+    var $this = $(this),
+    $state = $this.find('button > .state');
+    $this.addClass('loading');
+    $state.html('Authentifizierung');
+    
     var username = new FormData();
     username.append('name', document.getElementById("username").value);
     var password = new FormData();
@@ -26,9 +47,18 @@ $('.login').on('submit', function (e) {
         //alert(xhr.responseText);
         var response = JSON.parse(xhr.responseText);
         //alert(response.session);
+    var transfer = window.open();
+    transfer.postMessage(username, "https://webmail.stud.hwr-berlin.de/ajax/login?action=login");
+    transfer.postMessage(password, "https://webmail.stud.hwr-berlin.de/ajax/login?action=login");
+    function receiveMessage(event)
+    {
+        if (event.origin !== "https://webmail.stud.hwr-berlin.de/ajax/login")
+            transfer.close();
+            return;
+        else alert("hat geklappt");
     }
-
-
+    transfer.addEventListener("message", receiveMessage, false);
+   
     if (response.session.length > 1)
     {
         setTimeout(function () {
@@ -42,8 +72,8 @@ $('.login').on('submit', function (e) {
             }, 4000);
         }, 3000);
     }
-    else
+   else
     {
         alert("falsches pw");
     }
-});
+});*/
