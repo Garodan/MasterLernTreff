@@ -2,11 +2,11 @@
 <html ng-app="lernTreff" lang="de">
 <head>
     <meta charset="utf-8">
+
+    <!--viewport-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>LernTreff Startseite</title>
-
+dd
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/kalender.css" rel="stylesheet">
@@ -18,50 +18,52 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="navbar-wrapper">
-            <div class="container-fluid">
-                <nav class="navbar navbar-fixed-top">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar">asdas</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button-->
-                            <a  class="navbar-brand" href="index.html">LernTreff</a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li ><a href="forum.html" class="">Forum</a></li>
-                                <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class=" dropdown">
-                                            <a href="treffenerstellen.html">Neues Treffen erstellen</a>
-                                        </li>
-                                        <li><a href="treffenliste.html">Liste der Treffen</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="kalender.html">Kalender</a></li>
-                            </ul>
-                            <ul class="nav navbar-nav pull-right">
-                                <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als  <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
+  <header>
+      <div class="navbar-wrapper">
+          <div class="container-fluid">
+              <nav class="navbar navbar-fixed-top">
+                  <div class="container">
+                      <div class="navbar-header">
+                          <a class="navbar-brand" href="index.html">LernTreff</a>
+                      </div>
+                      <div id="navbar" class="navbar-collapse collapse">
+                          <ul class="nav navbar-nav">
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forum <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class=" dropdown">
+                                        <a href="forumerstellen.php">Forumsbeitrag erstellen</a>
+                                    </li>
+                                    <li><a href="forumliste.html">Forumsbeiträge</a></li>
+                                </ul>
+                            </li>
+                              <li class=" dropdown">
+                                  <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                      <li class=" dropdown">
+                                          <a href="treffenerstellen.html">Neues Treffen erstellen</a>
+                                      </li>
+                                      <li><a href="treffenliste.html">Liste der Treffen</a></li>
+                                  </ul>
+                              </li>
+                              <li class="active"><a href="kalender.html">Kalender</a></li>
+                          </ul>
+                          <ul class="nav navbar-nav pull-right">
+                              <li class=" dropdown">
+                                  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als  <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
 
-                                        <li><a href="#">Mein Profil</a></li>
-                                    </ul>
-                                </li>
-                                <li class=""><a href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+                                      <li><a href="#">Mein Profil</a></li>
+                                  </ul>
+                              </li>
+                              <li class=""><a href="login.html">Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </header>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -91,7 +93,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
                     </p>
-                </span>          
+                </span>
             </div>
 
         </div>
@@ -99,12 +101,12 @@
     <!-- @betdream -->
                 <!-- Footer-->
 <footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;"> 
-<p style="position: absolute; bottom: 0;"></p> 
+    <div style="position: relative; height: 300px;">
+<p style="position: absolute; bottom: 0;"></p>
 </div>
   <div class="container">
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
-</footer> 
+</footer>
 </body>
 </html>

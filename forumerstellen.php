@@ -1,21 +1,22 @@
 ﻿<!DOCTYPE html>
-<html ng-app="lernTreff" lang="de">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>LernTreff Liste</title>
+    <title>LernTreff Forumeintrag erstellen</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/trefflist.css" rel="stylesheet">
+    <link href="css/kalender.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
 
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -34,7 +35,7 @@
                                     <li class=" dropdown">
                                         <a href="forumerstellen.php">Forumsbeitrag erstellen</a>
                                     </li>
-                                    <li><a href="forumliste.html">Forumsbeiträge</a></li>
+                                    <li><a href="forumliste.php">Forumsbeiträge</a></li>
                                 </ul>
                             </li>
                               <li class=" dropdown">
@@ -64,92 +65,26 @@
           </div>
       </div>
   </header>
+  <div class="container" style="width:500px;">
+                  <h3 align="center">Forumbeitrag erstellen</h3>
+                  <div ng-app="myapp" ng-controller="forumcontroller">
+                       <label>Thema</label>
+                       <input type="text" name="thema_forum" ng-model="thema" class="form-control" />
+                       <br />
+                       <label>Beitrag</label>
+                       <input type="text" name="beitrag_forum" ng-model="beitrag" class="form-control" />
+                       <br />
+                       <input type="submit" name="btnInsert" class="btn btn-info" ng-click="insertData()" value="Beitrag erstellen"/>
+                  </div>
+             </div>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    </head>
-    <form class="form-horizontal">
-        <fieldset>
-
-            <!-- Form Name -->
-            <!--<legend>Neuer LernTreff</legend>-->
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Überschrift</label>
-                <div class="col-md-4">
-                    <input id="textinput" name="textinput" type="text" placeholder="grob das Thema umreißen" class="form-control input-md" required="">
-
-                </div>
-            </div>
-
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="selectbasic2">Semester</label>
-                <div class="col-md-4">
-                    <select id="selectbasic2" name="selectbasic2" class="form-control">
-                        <option value="1">1. Semester</option>
-                        <option value="2">2. Semester</option>
-                        <option value="3">3. Semester</option>
-                        <option value="4">4. Semester</option>
-                        <option value="5">5. Semester</option>
-                        <option value="6">6. Semester</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="selectbasic">Modul</label>
-                <div class="col-md-4">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
-                        <option value="1">Logik</option>
-                        <option value="2">Objektorientierte Programmierung</option>
-                        <option value="3">Diskrete Mathematik</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput2">Lernort</label>
-                <div class="col-md-4">
-                    <input id="textinput2" name="textinput2" type="text" placeholder="" class="form-control input-md">
-
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput3">Datum</label>
-                <div class="col-md-4">
-                    <input id="textinput3" name="textinput3" type="date" placeholder="" class="form-control input-md" required="">
-
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput3">Zeit</label>
-                <div class="col-md-4">
-                    <input id="textinput4" name="textinput4" type="time" placeholder="" class="form-control input-md" required="">
-
-                </div>
-            </div>
-
-            <!-- Textarea -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textarea">Beschreibung</label>
-                <div class="col-md-4">
-                    <textarea class="form-control" id="textarea" name="textarea">was wird gelernt?</textarea>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
             <!-- Footer-->
 <footer class="bs-footer" role="contentinfo">
     <div style="position: relative; height: 300px;">
@@ -159,5 +94,22 @@
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
 </footer>
+
 </body>
 </html>
+
+<script>
+var app = angular.module("myapp",[]);
+app.controller("forumcontroller", function($scope, $http){
+     $scope.insertData = function(){
+          $http.post(
+               "php/insert.php",
+               {'thema':$scope.thema, 'beitrag':$scope.beitrag}
+          ).success(function(data){
+               alert(data);
+               $scope.thema = null;
+               $scope.beitrag = null;
+          });
+     }
+});
+</script>
