@@ -15,6 +15,8 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -41,6 +43,7 @@
                                             <a href="treffenerstellen.html">Neues Treffen erstellen</a>
                                         </li>
                                         <li><a href="treffenliste.html">Liste der Treffen</a></li>
+
                                     </ul>
                                 </li>
                                 <li><a href="kalender.html">Kalender</a></li>
@@ -61,7 +64,50 @@
             </div>
         </div>
     </header>
- <h1>Forum noch in Bau!...</h1><!--ENTFERNEN-->
+
+    <div class="container" id="content_forum">
+
+	<h1>{{ title }}</h1>
+
+	<button class="btn btn-primary" ng-click="frmToggle()">Frage stellen</button>
+	<br>
+
+	<form class="form-horizontal" id="blogForm" ng-submit="pushData(frm)" hidden>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Titel</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="frm.title" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description" class="col-sm-2 control-label">Beschreibung</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" ng-model="frm.description"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" value="submit" class="btn btn-primary">Erstellen</button>
+			</div>
+		</div>
+	</form>
+
+	<br>
+	<input type="search" ng-model="query" placeholder="Frage suchen" class="form-control">
+	<br>
+	<table class="table table-striped">
+	 	<tr>
+	 		<th>Titel</th><th>Beschreibung/th><th>Hinzugefügt</th><th>Fertig</th>
+	 	</tr>
+	 	<tr ng-repeat="thread in threads | filter: query">
+	 		<td>{{ thread.title }}</td><td>{{ thread.description }}</td><td>{{ thread.added_date }}</td><td><button class="btn btn-danger" ng-click="removeData(thread.id)">x</button></td>
+	 	</tr>
+	</table>
+
+</div>
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -69,12 +115,13 @@
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
             <!-- Footer-->
 <footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;"> 
-<p style="position: absolute; bottom: 0;"></p> 
+    <div style="position: relative; height: 300px;">
+<p style="position: absolute; bottom: 0;"></p>
 </div>
   <div class="container">
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
-</footer> 
+</footer>
+
 </body>
 </html>
