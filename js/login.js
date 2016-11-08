@@ -17,6 +17,9 @@ $('.login').on('submit', function (e) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', "https://webmail.stud.hwr-berlin.de/ajax/login?action=login", true);
+    xhr.setRequestHeader("Cache-Control", "no-cache");
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.setRequestHeader("Content-Type", "multipart/form-data");
     xhr.send(username, password, action);
     xhr.onreadystatechange = processRequest;
     function processRequest(e) {
@@ -24,6 +27,7 @@ $('.login').on('submit', function (e) {
         var response = JSON.parse(xhr.responseText);
         //alert(response.session);
     }
+
 
     if (response.session.length > 1)
     {
