@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html ng-app="lernTreff" lang="de">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,13 +63,14 @@
             </div>
         </div>
     </header>
-
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     </head>
+    <div ng-app="myapp" ng-controller="empcontroller">
     <form class="form-horizontal">
         <fieldset>
 
@@ -79,7 +81,15 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Überschrift</label>
                 <div class="col-md-4">
-                    <input id="textinput" name="textinput" type="text" placeholder="grob das Thema umreißen" class="form-control input-md" required="">
+                    <input id="textinput" name="textinput" type="text" ng-model="Überschrift" placeholder="grob das Thema umreißen" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Semester</label>
+                <div class="col-md-4">
+                    <input id="textinput" name="textinput" type="text" ng-model="Semester" placeholder="Semester" class="form-control input-md" required="">
 
                 </div>
             </div>
@@ -98,7 +108,13 @@
                     </select>
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Modul</label>
+                <div class="col-md-4">
+                    <input id="textinput" name="textinput" type="text" ng-model="Modul" placeholder="Modul" class="form-control input-md" required="">
 
+                </div>
+            </div>
             <!-- Select Basic -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Modul</label>
@@ -115,7 +131,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput2">Lernort</label>
                 <div class="col-md-4">
-                    <input id="textinput2" name="textinput2" type="text" placeholder="" class="form-control input-md">
+                    <input id="textinput2" name="textinput2" type="text" ng-model="Lernort" placeholder="" class="form-control input-md">
 
                 </div>
             </div>
@@ -124,7 +140,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput3">Datum</label>
                 <div class="col-md-4">
-                    <input id="textinput3" name="textinput3" type="datetime" placeholder="" class="form-control input-md" required="">
+                    <input id="textinput3" name="textinput3" type="text" ng-model="Datum" placeholder="" class="form-control input-md" required="">
 
                 </div>
             </div>
@@ -136,9 +152,21 @@
                     <textarea class="form-control" id="textarea" name="textarea">was wird gelernt?</textarea>
                 </div>
             </div>
-
+            <input type="button" value="submit" ng-click="insertdata()"/>
         </fieldset>
     </form>
+    <script>
+        var app= angular.module('myapp', []);
+        app.controller('empcontroller', function($scope, $http){
+            $scope.insertdata=function(){
+                $http.post("insert.php", {'Überschrift':$scope.Überschrift, 'Semester':$scope.Semester,'Modul':$scope.Modul, 'Lernort':$scope.Lernort,'Datum':$scope.Datum})
+                .success(function(data,status,headers,config){
+                    console.log("data inserted successfully");
+                });
+            }
+        });
+    </script>
+    </div>
             <!-- Footer-->
 <footer class="bs-footer" role="contentinfo">
     <div style="position: relative; height: 300px;"> 
