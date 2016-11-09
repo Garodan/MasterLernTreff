@@ -19,13 +19,14 @@
 
 </head>
 <body>
+  
   <header>
       <div class="navbar-wrapper">
           <div class="container-fluid">
               <nav class="navbar navbar-fixed-top">
                   <div class="container">
                       <div class="navbar-header">
-                          <a class="navbar-brand" href="index.html">LernTreff</a>
+                          <a class="navbar-brand" href="startseite.html">LernTreff</a>
                       </div>
                       <div id="navbar" class="navbar-collapse collapse">
                           <ul class="nav navbar-nav">
@@ -42,9 +43,9 @@
                                   <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                       <li class=" dropdown">
-                                          <a href="treffenerstellen.html">Neues Treffen erstellen</a>
+                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
                                       </li>
-                                      <li><a href="treffenliste.html">Liste der Treffen</a></li>
+                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
                                   </ul>
                               </li>
                               <li class="active"><a href="kalender.html">Kalender</a></li>
@@ -65,6 +66,7 @@
           </div>
       </div>
   </header>
+
   <div class="container" style="width:500px;">
                   <h3 align="center">Forumbeitrag erstellen</h3>
                   <div ng-app="myapp" ng-controller="forumcontroller">

@@ -1,3 +1,9 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreffen_db");
+$query ="SELECT * FROM forumeintraege ORDER BY ID DESC";
+$result = mysqli_query($connect, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -15,17 +21,22 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.css" />
 
 </head>
 <body>
+
   <header>
       <div class="navbar-wrapper">
           <div class="container-fluid">
               <nav class="navbar navbar-fixed-top">
                   <div class="container">
                       <div class="navbar-header">
-                          <a class="navbar-brand" href="index.html">LernTreff</a>
+                          <a class="navbar-brand" href="startseite.html">LernTreff</a>
                       </div>
                       <div id="navbar" class="navbar-collapse collapse">
                           <ul class="nav navbar-nav">
@@ -42,9 +53,9 @@
                                   <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                       <li class=" dropdown">
-                                          <a href="treffenerstellen.html">Neues Treffen erstellen</a>
+                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
                                       </li>
-                                      <li><a href="treffenliste.html">Liste der Treffen</a></li>
+                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
                                   </ul>
                               </li>
                               <li class="active"><a href="kalender.html">Kalender</a></li>
@@ -65,12 +76,39 @@
           </div>
       </div>
   </header>
-    <div class="container" style="width:500px;">
-                    <h3 align="center">Forumbeiträge Liste</h3>
-                    <div ng-app="myapp" ng-controller="forumcontroller">
 
-                    </div>
-               </div>
+  <br /><br />
+  <div class="container">
+       <h3 align="center">Liste der Treffen</h3>
+       <br />
+       <div class="table-responsive">
+            <table id="employee_data" class="table table-striped table-bordered">
+                 <thead>
+                      <tr>
+                           <th data-column-id="id" data-type="numeric">Beitragsnr.</th>
+                           <th data-column-id="thema">Thema</th>
+                           <th data-column-id="beitrag">Beitrag</th>
+                           <th data-column-id="userID">Ersteller</th>
+                      </tr>
+                 </thead>
+                 <tbody>
+                 <?php
+                 while($row = mysqli_fetch_array($result))
+                 {
+                      echo '
+                      <tr>
+                           <td>'.$row["ID"].'</td>
+                           <td>'.$row["thema_forum"].'</td>
+                           <td>'.$row["beitrag_forum"].'</td>
+                           <td>'.$row["userID"].'</td>
+                      </tr>
+                      ';
+                 }
+                 ?>
+                 </tbody>
+            </table>
+       </div>
+  </div>
 
 
 
@@ -93,17 +131,5 @@
 </html>
 
 <script>
-var app = angular.module("myapp",[]);
-app.controller("forumcontroller", function($scope, $http){
-     $scope.insertData = function(){
-          $http.post(
-               "php/insert.php",
-               {'thema':$scope.thema, 'beitrag':$scope.beitrag}
-          ).success(function(data){
-               alert(data);
-               $scope.thema = null;
-               $scope.beitrag = null;
-          });
-     }
-});
+$("#employee_data").bootgrid();
 </script>

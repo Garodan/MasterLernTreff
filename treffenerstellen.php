@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="lernTreff" lang="de">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/trefflist.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
+    <!--link href="css/buttons.css" rel="stylesheet"-->
 
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -42,9 +43,9 @@
                                   <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                       <li class=" dropdown">
-                                          <a href="treffenerstellen.html">Neues Treffen erstellen</a>
+                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
                                       </li>
-                                      <li><a href="treffenliste.html">Liste der Treffen</a></li>
+                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
                                   </ul>
                               </li>
                               <li class="active"><a href="kalender.html">Kalender</a></li>
@@ -72,7 +73,7 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     </head>
-    <div ng-app="myapp" ng-controller="forumcontroller">
+    <div ng-app="myapp2" ng-controller="forumcontroller">
     <form class="form-horizontal" >
         <fieldset>
 
@@ -181,7 +182,7 @@
 </body>
 </html>
 <script>
-var app = angular.module("myapp",[]);
+var app = angular.module("myapp2",[]);
 app.controller("forumcontroller", function($scope, $http){
      $scope.insertData = function(){
           $http.post(

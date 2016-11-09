@@ -20,7 +20,7 @@ if(count($data) > 0)
      }
      else
      {
-          echo 'Error';
+          echo $data->ueberschrift;
      }
 }
 ?>
