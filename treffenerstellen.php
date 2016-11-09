@@ -95,12 +95,12 @@
                 <label class="col-md-4 control-label" for="studiengang_treff">Studiengang</label>
                 <div class="col-md-4">
                     <select id="studiengang_treff" name="studiengang_treff" ng-model="studiengang" class="form-control">
-                        <option value="1">Industrielle Elektrotechnik</option>
-                        <option value="2">Bauingenieurwesen</option>
-                        <option value="3">Konstruktion und Fertigung</option>
-                        <option value="4">Technisches Facility Management</option>
-                        <option value="5">Informatik</option>
-                        <option value="6">Wirtschaftsinformatik</option>
+                        <option value="Industrielle Elektrotechnik">Industrielle Elektrotechnik</option>
+                        <option value="Bauingenieurwesen">Bauingenieurwesen</option>
+                        <option value="Konstruktion und Fertigung">Konstruktion und Fertigung</option>
+                        <option value="Technisches Facility Management">Technisches Facility Management</option>
+                        <option value="Informatik">Informatik</option>
+                        <option value="Wirtschaftsinformatik">Wirtschaftsinformatik</option>
                     </select>
                 </div>
             </div>
@@ -110,12 +110,12 @@
                 <label class="col-md-4 control-label" for="semester_treff">Semester</label>
                 <div class="col-md-4">
                     <select id="semester_treff" name="semester_treff" ng-model=semester class="form-control">
-                        <option value="1">1. Semester</option>
-                        <option value="2">2. Semester</option>
-                        <option value="3">3. Semester</option>
-                        <option value="4">4. Semester</option>
-                        <option value="5">5. Semester</option>
-                        <option value="6">6. Semester</option>
+                        <option value="1. Semester">1. Semester</option>
+                        <option value="2. Semester">2. Semester</option>
+                        <option value="3. Semester">3. Semester</option>
+                        <option value="4. Semester">4. Semester</option>
+                        <option value="5. Semester">5. Semester</option>
+                        <option value="6. Semester">6. Semester</option>
                     </select>
                 </div>
             </div>

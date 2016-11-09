@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="utf-8">
@@ -19,7 +20,7 @@
 
 </head>
 <body>
-  
+
   <header>
       <div class="navbar-wrapper">
           <div class="container-fluid">

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+<?php
+$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreff_db");
+$query ="SELECT * FROM treffeneintraege ORDER BY ID DESC";
+$result = mysqli_query($connect, $query);
+?>
+
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="utf-8">
@@ -15,6 +21,11 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
+    <link rel="stylesheet" href="css/bootgrid.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
@@ -64,12 +75,53 @@
       </div>
   </header>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    </head>
+
+    <br /><br />
+    <div class="container">
+         <h3 align="center">Liste der Treffen</h3>
+         <br />
+         <div class="table-responsive">
+              <table id="treffen_data" class="table table-striped table-bordered">
+                   <thead>
+                        <tr>
+                             <th data-column-id="id" data-type="numeric">Treffennr.</th>
+                             <th data-column-id="ueberschrift">Überschrift</th>
+                             <th data-column-id="studiengang">Studiengang</th>
+                             <th data-column-id="semester">Semester</th>
+                             <th data-column-id="modul">Modul</th>
+                             <th data-column-id="ort">Ort</th>
+                             <th data-column-id="datum">Datum</th>
+                             <th data-column-id="zeit">Uhrzeit</th>
+                             <th data-column-id="beschreibung_treff">Beschreibung</th>
+                             <th data-column-id="userID">Ersteller</th>
+                        </tr>
+                   </thead>
+                   <tbody>
+                   <?php
+                   while($row = mysqli_fetch_array($result))
+                   {
+                        echo '
+                        <tr>
+                             <td>'.$row["ID"].'</td>
+                             <td>'.$row["ueberschrift_treff"].'</td>
+                             <td>'.$row["studiengang_treff"].'</td>
+                             <td>'.$row["semester_treff"].'</td>
+                             <td>'.$row["modul_treff"].'</td>
+                             <td>'.$row["ort_treff"].'</td>
+                             <td>'.$row["datum_treff"].'</td>
+                             <td>'.$row["zeit_treff"].'</td>
+                             <td>'.$row["beschreibung_treff"].'</td>
+                             <td>'.$row["userID"].'</td>
+                        </tr>
+                        ';
+                   }
+                   ?>
+                   </tbody>
+              </table>
+         </div>
+    </div>
+
+
     <div class="container">
         <div class="row" style="padding-top: 65px;">
             <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
@@ -136,3 +188,6 @@
 </footer>
 </body>
 </html>
+<script>
+$("#treffen_data").bootgrid();
+</script>

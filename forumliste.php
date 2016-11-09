@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreffen_db");
+$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreff_db");
 $query ="SELECT * FROM forumeintraege ORDER BY ID DESC";
 $result = mysqli_query($connect, $query);
 ?>
@@ -22,10 +22,8 @@ $result = mysqli_query($connect, $query);
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.css" />
+    <link rel="stylesheet" href="css/bootgrid.css" />
 
 </head>
 <body>
@@ -79,10 +77,10 @@ $result = mysqli_query($connect, $query);
 
   <br /><br />
   <div class="container">
-       <h3 align="center">Liste der Treffen</h3>
+       <h3 align="center">Liste der Forumbeiträge</h3>
        <br />
        <div class="table-responsive">
-            <table id="employee_data" class="table table-striped table-bordered">
+            <table id="beitraege_data" class="table table-striped table-bordered">
                  <thead>
                       <tr>
                            <th data-column-id="id" data-type="numeric">Beitragsnr.</th>
@@ -113,7 +111,7 @@ $result = mysqli_query($connect, $query);
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -131,5 +129,5 @@ $result = mysqli_query($connect, $query);
 </html>
 
 <script>
-$("#employee_data").bootgrid();
+$("#beitraege_data").bootgrid();
 </script>
