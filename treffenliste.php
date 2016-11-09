@@ -13,7 +13,6 @@
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/buttons.css" rel="stylesheet">
 
-
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
@@ -24,7 +23,7 @@
               <nav class="navbar navbar-fixed-top">
                   <div class="container">
                       <div class="navbar-header">
-                          <a class="navbar-brand" href="index.html">LernTreff</a>
+                          <a class="navbar-brand" href="startseite.html">LernTreff</a>
                       </div>
                       <div id="navbar" class="navbar-collapse collapse">
                           <ul class="nav navbar-nav">
@@ -41,9 +40,9 @@
                                   <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                       <li class=" dropdown">
-                                          <a href="treffenerstellen.html">Neues Treffen erstellen</a>
+                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
                                       </li>
-                                      <li><a href="treffenliste.html">Liste der Treffen</a></li>
+                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
                                   </ul>
                               </li>
                               <li class="active"><a href="kalender.html">Kalender</a></li>
@@ -56,7 +55,7 @@
                                       <li><a href="#">Mein Profil</a></li>
                                   </ul>
                               </li>
-                              <li class=""><a href="login.html">Logout</a></li>
+                              <li class=""><a href="index.html">Logout</a></li>
                           </ul>
                       </div>
                   </div>
@@ -71,91 +70,66 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     </head>
-    <form class="form-horizontal">
-        <fieldset>
+    <div class="container">
+        <div class="row" style="padding-top: 65px;">
+            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+                <ul class="event-list">
+                    <li>
+                        <time datetime="2014-07-20">
+                            <span class="day">4</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2016</span>
+                            <span class="time">ALL DAY</span>
+                        </time>
+                        <div class="info">
+                            <h2 class="title">Lerngruppe Sem. 1 Diskrete Mathematik</h2>
+                            <p class="desc">Bibliothek Campus Lichtenberg</p>
+                            <h3>An LernTreff teilnehmen</h3>
+                            <div class="col-sm-12">
+                                <div class="checkbox">
+                                    <label style="font-size: 2.5em">
+                                        <input type="checkbox" value="" checked>
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        Huge
+                                    </label>
+                                </div>
+                            </div>
 
-            <!-- Form Name -->
-            <!--<legend>Neuer LernTreff</legend>-->
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Überschrift</label>
-                <div class="col-md-4">
-                    <input id="textinput" name="textinput" type="text" placeholder="grob das Thema umreißen" class="form-control input-md" required="">
-
-                </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <span class="day">4</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2016</span>
+                            <span class="time">12:00 AM</span>
+                        </time>
+                        <div class="info">
+                            <h2 class="title">HA Logik Höhne</h2>
+                            <p class="desc">6B 173 Campus Lichtenberg</p>
+                        </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 2000">
+                            <span class="day">20</span>
+                            <span class="month">Dez</span>
+                            <span class="year">2016</span>
+                            <span class="time">8:00 PM</span>
+                        </time>
+                        <div class="info">
+                            <h2 class="title">Klausurvorbereitung Sem. 2 BWL</h2>
+                            <p class="desc">Bibliothek Campus Sch&oumlneberg</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="selectbasic2">Semester</label>
-                <div class="col-md-4">
-                    <select id="selectbasic2" name="selectbasic2" class="form-control">
-                        <option value="1">1. Semester</option>
-                        <option value="2">2. Semester</option>
-                        <option value="3">3. Semester</option>
-                        <option value="4">4. Semester</option>
-                        <option value="5">5. Semester</option>
-                        <option value="6">6. Semester</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="selectbasic">Modul</label>
-                <div class="col-md-4">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
-                        <option value="1">Logik</option>
-                        <option value="2">Objektorientierte Programmierung</option>
-                        <option value="3">Diskrete Mathematik</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput2">Lernort</label>
-                <div class="col-md-4">
-                    <input id="textinput2" name="textinput2" type="text" placeholder="" class="form-control input-md">
-
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput3">Datum</label>
-                <div class="col-md-4">
-                    <input id="textinput3" name="textinput3" type="date" placeholder="" class="form-control input-md" required="">
-
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput3">Zeit</label>
-                <div class="col-md-4">
-                    <input id="textinput4" name="textinput4" type="time" placeholder="" class="form-control input-md" required="">
-
-                </div>
-            </div>
-
-            <!-- Textarea -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textarea">Beschreibung</label>
-                <div class="col-md-4">
-                    <textarea class="form-control" id="textarea" name="textarea">was wird gelernt?</textarea>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
+        </div>
+    </div>
             <!-- Footer-->
 <footer class="bs-footer" role="contentinfo">
     <div style="position: relative; height: 300px;">
 <p style="position: absolute; bottom: 0;"></p>
 </div>
-  <div class="container">
+  <div class="container" style="width:500px;">
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
 </footer>

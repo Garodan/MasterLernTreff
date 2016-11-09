@@ -57,7 +57,7 @@
                                       <li><a href="#">Mein Profil</a></li>
                                   </ul>
                               </li>
-                              <li class=""><a href="login.html">Logout</a></li>
+                              <li class=""><a href="index.html">Logout</a></li>
                           </ul>
                       </div>
                   </div>
@@ -69,13 +69,12 @@
                   <h3 align="center">Forumbeitrag erstellen</h3>
                   <div ng-app="myapp" ng-controller="forumcontroller">
                        <label>Thema</label>
-                       <input type="text" name="thema_forum" ng-model="thema" class="form-control" />
+                       <input type="text" name="thema_forum" ng-model="thema" class="form-control" required/>
                        <br />
                        <label>Beitrag</label>
-                       <input type="text" name="beitrag_forum" ng-model="beitrag" class="form-control" />
+                       <textarea input type="text" name="beitrag_forum" ng-model="beitrag" class="form-control" required/></textarea>
                        <br />
                        <input type="submit" name="btnInsert" class="btn btn-info" ng-click="insertData()" value="Beitrag erstellen"/>
-                  </div>
              </div>
 
 
@@ -90,7 +89,7 @@
     <div style="position: relative; height: 300px;">
 <p style="position: absolute; bottom: 0;"></p>
 </div>
-  <div class="container">
+  <div class="container" style="width:500px;">
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
 </footer>

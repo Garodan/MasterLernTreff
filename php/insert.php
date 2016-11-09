@@ -1,6 +1,6 @@
 <?php
 //insert.php
-$connect = mysqli_connect("localhost:3306", "root", "", "lerntreff_db");
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 $data = json_decode(file_get_contents("php://input"));
 if(count($data) > 0)
 {

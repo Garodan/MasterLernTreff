@@ -13,7 +13,7 @@ $('.login').on('submit', function(e) {
         setTimeout(function() {
             $state.html('Log in');
             $this.removeClass('ok loading');
-            window.location.href = './index.html';
+            window.location.href = './startseite.html';
             working = false;
         }, 4000);
     }, 3000);
@@ -28,7 +28,7 @@ $('.login').on('submit', function (e) {
     $state = $this.find('button > .state');
     $this.addClass('loading');
     $state.html('Authentifizierung');
-    
+
     var username = new FormData();
     username.append('name', document.getElementById("username").value);
     var password = new FormData();
@@ -58,7 +58,7 @@ $('.login').on('submit', function (e) {
         else alert("hat geklappt");
     }
     transfer.addEventListener("message", receiveMessage, false);
-   
+
     if (response.session.length > 1)
     {
         setTimeout(function () {

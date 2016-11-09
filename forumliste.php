@@ -57,7 +57,7 @@
                                       <li><a href="#">Mein Profil</a></li>
                                   </ul>
                               </li>
-                              <li class=""><a href="login.html">Logout</a></li>
+                              <li class=""><a href="index.html">Logout</a></li>
                           </ul>
                       </div>
                   </div>
@@ -68,7 +68,7 @@
     <div class="container" style="width:500px;">
                     <h3 align="center">Forumbeiträge Liste</h3>
                     <div ng-app="myapp" ng-controller="forumcontroller">
-                         
+
                     </div>
                </div>
 
@@ -84,7 +84,7 @@
     <div style="position: relative; height: 300px;">
 <p style="position: absolute; bottom: 0;"></p>
 </div>
-  <div class="container">
+  <div class="container" style="width:500px;">
     <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
   </div>
 </footer>
