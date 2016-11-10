@@ -10,16 +10,16 @@ $('.login').on('submit', function(e) {
     var result;
     var username = document.getElementById("username").value;
     var password = document.getElementById("passwd").value;
-    clickJStoPHPFunctoJS();
+    /*clickJStoPHPFunctoJS();
 
 
-    /*window.location.href = './php/login.php'
+    window.location.href = './php/login.php'
     var xhr = new XMLHttpRequest();
     xhr.open('post', "/php/login.php", true);
     xhr.setRequestHeader("Cache-Control", "no-cache");
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded");
-    xhr.send(username,password);*/
+    xhr.send(username,password);
     function clickJStoPHPFunctoJS(event){
                      $.ajax({
                              url: "/php/login.php",
@@ -34,7 +34,7 @@ $('.login').on('submit', function(e) {
                                       var response = $.parseJSON(data);
                                       var newname = response.newname;
                                       alert("Mein neuer Name: " + newname);
-                                  }
+                                  }*/
 
 
     setTimeout(function () {
