@@ -10,31 +10,20 @@ $('.login').on('submit', function(e) {
     var result;
     var username = document.getElementById("username").value;
     var password = document.getElementById("passwd").value;
-    /*clickJStoPHPFunctoJS();
-
-
-    window.location.href = './php/login.php'
-    var xhr = new XMLHttpRequest();
-    xhr.open('post', "/php/login.php", true);
-    xhr.setRequestHeader("Cache-Control", "no-cache");
-    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded");
-    xhr.send(username,password);
-    function clickJStoPHPFunctoJS(event){
-                     $.ajax({
-                             url: "/php/login.php",
-                             data: {name: username, password: password},
-                             datatype: "json",
-                             type: "POST",
-                             success: function(data) { clickJStoPHPFunctoJSResponse(data); }
-                     });
-
-                     function clickJStoPHPFunctoJSResponse(data) {
-                                      // Antwort des Server ggf. verarbeiten
-                                      var response = $.parseJSON(data);
-                                      var newname = response.newname;
-                                      alert("Mein neuer Name: " + newname);
-                                  }*/
+    
+	// Simple GET request example:
+$http({
+  method: 'POST',
+  url: 'https://webmail.stud.hwr-berlin.de/ajax/login?action=login'
+  data: { name : document.getElementById("username").value 
+		  password : document.getElementById("passwd").value	
+		  action : 'login'
+		}
+}).then(function successCallback(response) {
+    window.alert("success");
+  }, function errorCallback(response) {
+    window.alert("error");
+  });
 
 
     setTimeout(function () {
