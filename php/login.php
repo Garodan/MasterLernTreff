@@ -3,12 +3,12 @@ if(isset($_POST['username']))
 {
 $username = $_POST['username'];
 }
-if(isset($_POST['password']))
+if(isset($_POST['passwd']))
 {
-$password = $_POST['password'];
+$password = $_POST['passwd'];
 }
-//$username = "s_schenker";
-//$password = "Cyb3rwaruser";
+$username = "s_schenker";
+$password = "Cyb3rwaruser";
 
 echo $username;
 $back = logon($username,$password);
