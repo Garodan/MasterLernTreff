@@ -12,17 +12,16 @@
 <body>
 
 <div class="wrapper">
-  <form class="login">
+  <form class="login" action="php/login.php" method="POST">
     <p class="title">Einloggen</p>
-     <input type="text" placeholder="Benutzername" id="username"/>
+     <input type="text" placeholder="Benutzername" name="usr" id="username"/>
       <i class="fa fa-user"></i>
-    <input type="password" placeholder="Passwort" id="passwd"/>
+    <input type="password" placeholder="Passwort" name="pwd" id="passwd"/>
       <i class="fa fa-key"></i>
     <a href="http://www.it.hwr-berlin.de/de/helpdesk/haeufige-fragen/">Passwort vergessen?</a>
     <button>
       <i class="spinner"></i>
       <span class="state">Einloggen</span>
-      <script src="php/login.php"></script>
     </button>
   </form>
 </div>

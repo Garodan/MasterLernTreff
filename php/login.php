@@ -1,14 +1,14 @@
 <?php
-if(isset($_POST['username']))
+if(isset($_POST['usr']))
 {
-$username = $_POST['username'];
+$username = $_POST['usr'];
 }
-if(isset($_POST['passwd']))
+if(isset($_POST['pwd']))
 {
-$password = $_POST['passwd'];
+$password = $_POST['pwd'];
 }
-$username = "s_schenker";
-$password = "Cyb3rwaruser";
+// $username = "s_schenker";
+// $password = "Cyb3rwaruser";
 
 echo $username;
 $back = logon($username,$password);
