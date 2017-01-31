@@ -7,13 +7,15 @@ if(isset($_POST['pwd']))
 {
 $password = $_POST['pwd'];
 }
-// $username = "s_schenker";
-// $password = "Cyb3rwaruser";
 
 echo $username;
 $back = logon($username,$password);
 $success = substr ( $back , 1 );
 
+if ( $success == "s"){
+alert ("Login successfully");
+header('Location: startseite.html');}
+/*
 if($success = "s"){
 echo "<script src=";
 echo "../js/login.js";
@@ -22,7 +24,7 @@ echo "></script>";
 else
 {
 
-}
+}*/
 
 function logon(&$username,&$password)
 {
