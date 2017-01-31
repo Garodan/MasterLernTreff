@@ -12,7 +12,17 @@ $password = $_POST['pwd'];
 
 echo $username;
 $back = logon($username,$password);
+$success = substr ( $back , 1 );
 
+if($success = "s"){
+echo "<script src=";
+echo "../js/login.js";
+echo "></script>";
+}
+else
+{
+
+}
 
 function logon(&$username,&$password)
 {
