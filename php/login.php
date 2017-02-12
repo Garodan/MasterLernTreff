@@ -10,21 +10,23 @@ $password = $_POST['pwd'];
 
 echo $username;
 $back = logon($username,$password);
-$success = substr ( $back , 1 );
+$success = substr ( $back , -3 );
 
-if ( $success == "s"){
+if ( $success == "E"){
 alert ("Login successfully");
-header('Location: startseite.html');}
-/*
+/*header('Location: localhost/MasterLernTreff/startseite.html');}*/
+
 if($success = "s"){
+echo '<script src="../js/login.js"></script>'; 
+/*
 echo "<script src=";
 echo "../js/login.js";
-echo "></script>";
+echo "></script>";*/
 }
 else
 {
 
-}*/
+}}
 
 function logon(&$username,&$password)
 {

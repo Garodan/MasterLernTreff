@@ -1,5 +1,5 @@
 var working = false;
-$('.login').on('submit', function(e) {
+$('.login').ready(function(e) {
     e.preventDefault();
     if (working) return;
     working = true;

@@ -12,7 +12,7 @@
 <body>
 
 <div class="wrapper">
-  <form class="login" action="php/login.php" method="POST">
+  <form class="login" action="" method="POST">
     <p class="title">Einloggen</p>
      <input type="text" placeholder="Benutzername" name="usr" id="username"/>
       <i class="fa fa-user"></i>
@@ -39,3 +39,59 @@
 </footer>
 </body>
 </html>
+
+<?php
+if(isset($_POST['usr']))
+{
+$username = $_POST['usr'];
+}
+if(isset($_POST['pwd']))
+{
+$password = $_POST['pwd'];
+}
+/*json_decode($back)*/
+$back = logon($username,$password);
+list($session, $user, $user_id, $context_id, $locale) = explode(",", $back);
+if(substr($user, 8, 1) == "s")
+{	
+echo $user;
+header ( 'Location: startseite.html' ); 
+}
+else
+{
+echo $session;
+echo "<script type='text/javascript' langeuage='javascript'>n"; 
+echo "<!--n"; 
+echo " alert('"Login Fehlgeschlagen"');n"; 
+echo "//-->n"; 
+echo "</script>";  
+}
+
+function logon(&$username,&$password)
+{
+$url = "https://webmail.stud.hwr-berlin.de/ajax/login?action=login"; 
+
+$ch = curl_init();
+$data = array(
+		'name' => $username,
+        'password' => $password,
+		'action' => 'login',
+         );
+$curlConfig = array(
+    CURLOPT_URL            => $url,
+    CURLOPT_POST           => true,
+    CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_CERTINFO       => true,
+	CURLOPT_COOKIESESSION  => true,
+	CURLINFO_HEADER_OUT    => true,
+	CURLOPT_AUTOREFERER    => true,
+	CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_POSTFIELDS     => http_build_query($data)
+);
+curl_setopt_array($ch, $curlConfig);
+$result = curl_exec($ch);
+curl_close($ch); 
+echo $result;
+return $result;
+}
+ ?>
