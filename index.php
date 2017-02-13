@@ -60,11 +60,11 @@ header ( 'Location: startseite.html' );
 else
 {
 echo $session;
-echo "<script type='text/javascript' langeuage='javascript'>n"; 
-echo "<!--n"; 
-echo " alert('"Login Fehlgeschlagen"');n"; 
-echo "//-->n"; 
-echo "</script>";  
+if(isset($session)
+{
+echo "<script type='text/javascript' src='js/login.js' language='javascript'>"; 
+echo "</script>"; 
+}
 }
 
 function logon(&$username,&$password)
