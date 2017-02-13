@@ -41,6 +41,7 @@
 </html>
 
 <?php
+$first;
 if(isset($_POST['usr']))
 {
 $username = $_POST['usr'];
@@ -60,10 +61,14 @@ header ( 'Location: startseite.html' );
 else
 {
 echo $session;
-if(isset($session)
+if(substr($session, 10, 1) == "T")
 {
 echo "<script type='text/javascript' src='js/login.js' language='javascript'>"; 
 echo "</script>"; 
+}
+else
+{
+$first = true;	
 }
 }
 
