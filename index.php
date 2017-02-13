@@ -61,11 +61,7 @@ header ( 'Location: startseite.html' );
 else
 {
 echo $session;
-<<<<<<< HEAD
-if(isset($session))
-=======
 if(substr($session, 10, 1) == "T")
->>>>>>> origin/master
 {
 echo "<script type='text/javascript' src='js/login.js' language='javascript'>"; 
 echo "</script>"; 
