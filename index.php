@@ -60,7 +60,7 @@ header ( 'Location: startseite.html' );
 else
 {
 echo $session;
-if(isset($session)
+if(isset($session))
 {
 echo "<script type='text/javascript' src='js/login.js' language='javascript'>"; 
 echo "</script>"; 
