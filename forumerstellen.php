@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="de">
+<html ng-app="lerntreff" lang="de-DE">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/kalender.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">3
 
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -99,9 +99,8 @@
 
 </body>
 </html>
-
 <script>
-var app = angular.module("myapp",[]);
+var app = angular.module("lerntreff",[]);
 app.controller("forumcontroller", function($scope, $http){
      $scope.insertData = function(){
           $http.post(

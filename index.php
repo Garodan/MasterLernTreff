@@ -1,12 +1,15 @@
-﻿<!doctype html>
-<meta charset="utf-8">
+<!doctype html>
 <html ng-app="lernTreff">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LernTreff Login</title>
-<link href="css/login.css" rel="stylesheet"
-<script src="js/prefixfree.min.js">
+
+<!-- Style -->
+<link href="css/login.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -54,27 +57,27 @@ $password = $_POST['pwd'];
 $back = logon($username,$password);
 list($session, $user, $user_id, $context_id, $locale) = explode(",", $back);
 if(substr($user, 8, 1) == "s")
-{	
+{
 echo $user;
-header ( 'Location: startseite.html' ); 
+header ( 'Location: startseite.html' );
 }
 else
 {
 echo $session;
 if(substr($session, 10, 1) == "T")
 {
-echo "<script type='text/javascript' src='js/login.js' language='javascript'>"; 
-echo "</script>"; 
+echo "<script type='text/javascript' src='js/login.js' language='javascript'>";
+echo "</script>";
 }
 else
 {
-$first = true;	
+$first = true;
 }
 }
 
 function logon(&$username,&$password)
 {
-$url = "https://webmail.stud.hwr-berlin.de/ajax/login?action=login"; 
+$url = "https://webmail.stud.hwr-berlin.de/ajax/login?action=login";
 
 $ch = curl_init();
 $data = array(
@@ -95,7 +98,7 @@ $curlConfig = array(
 );
 curl_setopt_array($ch, $curlConfig);
 $result = curl_exec($ch);
-curl_close($ch); 
+curl_close($ch);
 echo $result;
 return $result;
 }

@@ -1,11 +1,11 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreff_db");
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 $query ="SELECT * FROM forumeintraege ORDER BY ID DESC";
 $result = mysqli_query($connect, $query);
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<htmllang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
