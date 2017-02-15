@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "lerntreff", "lerntreff_db");
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 $query ="SELECT * FROM treffeneintraege ORDER BY ID DESC";
 $result = mysqli_query($connect, $query);
 ?>
