@@ -119,7 +119,8 @@ $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
                         <div class="info">
                             <h2 class="title"><?php $query3 ="SELECT * FROM treffeneintraege WHERE ID=3 ORDER BY ID DESC"; $result3 = mysqli_query($connect, $query3); while($row3 = mysqli_fetch_array($result3)){echo "{$row3['beschreibung_treff']}";}?></h2>
                             <p class="desc"><?php $query3 ="SELECT * FROM treffeneintraege WHERE ID=3 ORDER BY ID DESC"; $result3 = mysqli_query($connect, $query3); while($row3 = mysqli_fetch_array($result3)){echo "{$row3['ort_treff']}";}?></p>
-                        </div>
+                            <p class="desc"><?php $query3 ="SELECT * FROM treffeneintraege WHERE ID=3 ORDER BY ID DESC"; $result3 = mysqli_query($connect, $query3); while($row3 = mysqli_fetch_array($result3)){echo "Beschreibung: {$row3['beschreibung_treff']}";}?></p>
+                     </div>
                     </li>
                        <li>
                         <time datetime="2016-11-02 0000">
