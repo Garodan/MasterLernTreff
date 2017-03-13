@@ -54,7 +54,7 @@ $result = json_decode($back);
 if(isset($result->{"session"}))
 {
 $name = $result->{"user"};
-$_SESSION[name] = $name;
+$_SESSION['name'] = $name;
 header ( 'Location: startseite.php' );
 }
 else
@@ -94,7 +94,7 @@ $curlConfig = array(
 curl_setopt_array($ch, $curlConfig);
 $result = curl_exec($ch);
 curl_close($ch);
-echo $result;
+
 return $result;
 }
  ?>
