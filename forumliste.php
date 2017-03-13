@@ -33,7 +33,7 @@ $result = mysqli_query($connect, $query);
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!-- Own Script -->
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
   <!-- kein Plan -->
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <!-- kein Plan -->
