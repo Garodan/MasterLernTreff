@@ -9,12 +9,12 @@ body, html {
 }
 #login-box {
 	position: absolute;
-	top: 200px;
+	top: 300px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 350px;
 	margin: 0 auto;
-	border: 1px solid black;
+	border: 0px solid black;
 	
 	min-height: 250px;
 	padding: 20px;
