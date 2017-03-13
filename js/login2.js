@@ -72,7 +72,7 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
           "events": {
             "onhover": {
               "enable": true,
-              "mode": "grab"
+              "mode": "repulse"
             },
             "onclick": {
               "enable": true,
@@ -82,7 +82,7 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
           },
           "modes": {
             "grab": {
-              "distance": 400,
+              "distance": 200,
               "line_linked": {
                 "opacity": 1
               }
