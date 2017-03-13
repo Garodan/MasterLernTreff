@@ -41,9 +41,7 @@
     </br>
     </br>
     <!-- TODO | mit bootstrap schön machen -->
-    <h1>Sobald wir die häufigsten Fragen ermittelt haben, werden diese hier natürlich beantwortet</h1>
-
-
+    <h1>Sobald wir die häufigsten Fragen ermittelt haben, werden diese hier natürlich beantwortet.</h1>
 
     <!-- Footer -->
     <ng-include src="'templates/footer.php'"></ng-include>
