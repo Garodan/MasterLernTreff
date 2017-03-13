@@ -3,90 +3,54 @@ $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html ng-app>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LernTreff Treffen erstellen</title>
+  <meta charset="utf-8" lang="DE">
 
-    <title>LernTreff Liste</title>
+  <!--viewport-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/trefflist.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
-    <!--link href="css/buttons.css" rel="stylesheet"-->
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Navbar -->
+  <link href="css/navbar.css" rel="stylesheet">
+  <!-- K.A. -->
+  <link href="css/indexmenu.css" rel="stylesheet">
+  <!-- Treffen Liste  CSS -->
+  <link href="css/trefflist.css" rel="stylesheet">
 
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
-    <link rel="stylesheet" href="css/bootgrid.css" />
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+  <!-- Scripts -->
+  <!-- Angularjs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Own Script -->
+  <script src="app.js"></script>
+  <!-- kein Plan -->
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <!-- kein Plan -->
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
-  <header>
-      <div class="navbar-wrapper">
-          <div class="container-fluid">
-              <nav class="navbar navbar-fixed-top">
-                  <div class="container">
-                      <div class="navbar-header">
-                          <a class="navbar-brand" href="startseite.html">LernTreff</a>
-                      </div>
-                      <div id="navbar" class="navbar-collapse collapse">
-                          <ul class="nav navbar-nav">
-						  
-                            <li class=" dropdown">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forum <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class=" dropdown">
-                                        <a href="forumerstellen.php">Forumsbeitrag erstellen</a>
-                                    </li>
-                                    <li><a href="forumliste.php">Forumsbeiträge</a></li>
-                                </ul>
-                            </li>
-                              <li class=" dropdown">
-                                  <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                      <li class=" dropdown">
-                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
-                                      </li>
-                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
-                                  </ul>
-                              </li>
-                              <li class="active"><a href="kalender.html">Kalender</a></li>
-                          </ul>
-                          <ul class="nav navbar-nav pull-right">
-                              <li class=" dropdown">
-                                  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als  <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
+  <ng-include src="'header.html'"></ng-include>
 
-                                      <li><a href="#">Mein Profil</a></li>
-                                  </ul>
-                              </li>
-                              <li class=""><a href="index.html">Logout</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
-          </div>
-      </div>
-  </header>
+  <div class="container">
+    <h2 align="center">Liste der aktuellen Treffen</h2>
+  </div>
 
-
-    <br /><br />
-    <div class="container">
-         <h2 align="center">Liste der aktuellen Treffen</h2>
-    </div>
-
-
-    <div class="container">
-        <div class="row" style="padding-top: 65px;">
-            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-                <ul class="event-list">
-                    <li>
-                        <time datetime="2016-11-02 0000">
+  <div class="container">
+    <div class="row" style="padding-top: 65px;">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <ul class="event-list">
+          <li>
+            <time datetime="2016-11-02 0000">
                             <span class="day"><?php $query1 ="SELECT * FROM treffeneintraege WHERE ID=1 ORDER BY ID DESC"; $result1 = mysqli_query($connect, $query1); while($row1 = mysqli_fetch_array($result1)){echo substr("{$row1['datum_treff']}",9,2);}?></span>
                             <span class="month"><?php $query1 ="SELECT * FROM treffeneintraege WHERE ID=1 ORDER BY ID DESC"; $result1 = mysqli_query($connect, $query1); while($row1 = mysqli_fetch_array($result1)){echo substr("{$row1['datum_treff']}",5,2);}?></span>
                             <span class="year"><?php $query1 ="SELECT * FROM treffeneintraege WHERE ID=1 ORDER BY ID DESC"; $result1 = mysqli_query($connect, $query1); while($row1 = mysqli_fetch_array($result1)){echo substr("{$row1['datum_treff']}",1,4);}?></span>
