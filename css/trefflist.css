@@ -2,9 +2,9 @@
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
     body {
 		padding: 60px 0px;
-		background-color: rgb(220, 220, 220);
+
 	}
-    
+
     .event-list {
 		list-style: none;
 		font-family: 'Lato', sans-serif;
@@ -88,13 +88,13 @@
 		width: 100%;
 		color: rgb(30, 30, 30);
 		text-decoration: none;
-	} 
-    .event-list > li > .social > ul > li {    
+	}
+    .event-list > li > .social > ul > li {
         padding: 0px;
     }
     .event-list > li > .social > ul > li > a {
         padding: 3px 0px;
-	} 
+	}
 	.event-list > li > .info > ul > li:hover,
 	.event-list > li > .social > ul > li:hover {
 		color: rgb(30, 30, 30);
@@ -159,8 +159,8 @@
 			height: 120px;
 			text-align: left;
 			padding-right: 40px;
-		}	
-		.event-list > li > .info > .title, 
+		}
+		.event-list > li > .info > .title,
 		.event-list > li > .info > .desc {
 			padding: 0px 10px;
 		}
@@ -179,7 +179,7 @@
         .event-list > li > .social > ul {
             border-left: 1px solid rgb(230, 230, 230);
         }
-		.event-list > li > .social > ul > li {			
+		.event-list > li > .social > ul > li {
 			display: block;
             padding: 0px;
 		}
