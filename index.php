@@ -38,6 +38,7 @@
 </html>
 
 <?php
+session_start(true);
 $first;
 if(isset($_POST['usr']))
 {
@@ -49,16 +50,16 @@ $password = $_POST['pwd'];
 }
 /*json_decode($back)*/
 $back = logon($username,$password);
-list($session, $user, $user_id, $context_id, $locale) = explode(",", $back);
-if(substr($user, 8, 1) == "s")
+$result = json_decode($back);
+if(isset($result->{"session"}))
 {
-echo $user;
+$name = $result->{"user"};
+$_SESSION[name] = $name;
 header ( 'Location: startseite.html' );
 }
 else
 {
-echo $session;
-if(substr($session, 10, 1) == "T")
+if(isset($result->{"error"})&&$_POST['usr']!="")
 {
 echo "<script type='text/javascript' src='js/login.js' language='javascript'>";
 echo "</script>";
@@ -76,18 +77,18 @@ $url = "https://webmail.stud.hwr-berlin.de/ajax/login?action=login";
 $ch = curl_init();
 $data = array(
 		'name' => $username,
-        'password' => $password,
+    'password' => $password,
 		'action' => 'login',
          );
 $curlConfig = array(
     CURLOPT_URL            => $url,
     CURLOPT_POST           => true,
     CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_CERTINFO       => true,
-	CURLOPT_COOKIESESSION  => true,
-	CURLINFO_HEADER_OUT    => true,
-	CURLOPT_AUTOREFERER    => true,
-	CURLOPT_SSL_VERIFYPEER => false,
+	  CURLOPT_CERTINFO       => true,
+  	CURLOPT_COOKIESESSION  => true,
+  	CURLINFO_HEADER_OUT    => true,
+  	CURLOPT_AUTOREFERER    => true,
+  	CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_POSTFIELDS     => http_build_query($data)
 );
 curl_setopt_array($ch, $curlConfig);
