@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="lerntreff">
 
 <head>
   <meta charset="utf-8" lang="DE">
@@ -25,6 +25,8 @@
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
+
+
 <body>
   <!-- HEADER(Navbar) -->
   <ng-include src="'templates/header.php'"></ng-include>
@@ -45,6 +47,8 @@
 <!-- Footer -->
 <ng-include src="'templates/footer.php'"></ng-include>
 
+<!-- Own Script -->
+<script src="app.js"></script>
 </body>
 
 </html>
