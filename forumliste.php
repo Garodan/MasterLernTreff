@@ -46,7 +46,7 @@ $result = mysqli_query($connect, $query);
 
 </head>
 <body>
-  <ng-include src="'templates/header.html'"></ng-include>
+  <ng-include src="'templates/header.php'"></ng-include>
 
   <br /><br />
   <div class="container">
@@ -89,7 +89,7 @@ $result = mysqli_query($connect, $query);
 <p style="position: absolute; bottom: 0;"></p>
 </div>
   <div class="container" style="width:500px;">
-    <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
+    <center> hwr-lerntreff.de <a href="impressum.php" target="_blank">Impressum</a> | <a href="agbs.php" target="_blank">AGBs</a> | <a href="faq.php" target="_blank">FAQ</a></center>
   </div>
 </footer>
 

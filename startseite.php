@@ -41,7 +41,7 @@
 
 <body>
     <!-- HEADER(Navbar) -->
-    <ng-include src="'templates/header.html'"></ng-include>
+    <ng-include src="'templates/header.php'"></ng-include>
     <!-- TODO | muss noch in CSS geändert werden -->
     </br>
     </br>
@@ -114,7 +114,7 @@
     </article>
 
     <!-- Footer -->
-    <ng-include src="'templates/footer.html'"></ng-include>
+    <ng-include src="'templates/footer.php'"></ng-include>
 </body>
 
 </html>

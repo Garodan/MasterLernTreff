@@ -39,7 +39,7 @@
 
 <body>
     <!-- HEADER(Navbar) -->
-  <ng-include src="'templates/header.html'"></ng-include>
+  <ng-include src="'templates/header.php'"></ng-include>
 
     <!-- Treffen erstellen FORM -->
     <div>
@@ -140,7 +140,7 @@
 </div>
 
 <!-- Footer-->
-<ng-include src="'templates/footer.html'"></ng-include>
+<ng-include src="'templates/footer.php'"></ng-include>
 
 </body>
 </html>

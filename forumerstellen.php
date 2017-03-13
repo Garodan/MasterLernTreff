@@ -27,7 +27,7 @@
 
 <body>
   <!-- HEADER(Navbar) -->
-  <ng-include src="'templates/header.html'"></ng-include>
+  <ng-include src="'templates/header.php'"></ng-include>
 
   <div class="container" style="width:500px;">
                   <h3 align="center">Forumbeitrag erstellen</h3>
@@ -43,7 +43,7 @@
 
 <!-- TODO | CSS lässt den Footer ausblenden -->
 <!-- Footer -->
-<ng-include src="'templates/footer.html'"></ng-include>
+<ng-include src="'templates/footer.php'"></ng-include>
 
 </body>
 

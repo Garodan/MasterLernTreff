@@ -70,8 +70,8 @@
         </style>
     </head>
     <body>
-        <ng-include src="'../../templates/calHeader.html'"></ng-include>
+        <ng-include src="'../../templates/calHeader.php'"></ng-include>
         <div id='calendar'></div>
-        <ng-include src="'../../templates/calFooter.html'"></ng-include>
+        <ng-include src="'../../templates/calFooter.php'"></ng-include>
     </body>
 </html>

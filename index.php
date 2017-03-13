@@ -33,7 +33,7 @@
 
 
             <!-- Footer -->
-            <ng-include src="'templates/footer.html'"></ng-include>
+            <ng-include src="'templates/footer.php'"></ng-include>
 </body>
 </html>
 
@@ -55,7 +55,7 @@ if(isset($result->{"session"}))
 {
 $name = $result->{"user"};
 $_SESSION[name] = $name;
-header ( 'Location: startseite.html' );
+header ( 'Location: startseite.php' );
 }
 else
 {

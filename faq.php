@@ -2,7 +2,7 @@
 <html ng-app>
 
 <head>
-    <title>AGBs</title>
+    <title>FAQ</title>
     <meta charset="utf-8" lang="DE">
 
     <!--viewport-->
@@ -32,23 +32,21 @@
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
-
 </head>
 
 <body>
-
     <!-- HEADER(Navbar) -->
-    <ng-include src="'templates/header.html'"></ng-include>
-
+    <ng-include src="'templates/header.php'"></ng-include>
     <!-- TODO | muss noch in CSS geändert werden -->
     </br>
     </br>
-
     <!-- TODO | mit bootstrap schön machen -->
-    <h1>Allgemeine Geschäftsbedingungen<h2>Vertragspartner</h2>Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und <br />LernTreff<br />Vertreten durch Can Kalkan<br />Adresse: Parchimer Allee 36/38  12359 Berlin<br />Tel: 0176/30674762<br />E-Mail-Adresse: s_kalkan@hwr-berlin.de<br /><br />Handelsregister: k.A<br />Handelsregisternummer: k.A<br />Umsatzsteuer-Identifikationsnummer: k.A<br /> , nachfolgend Anbieter genannt, der Vertrag zustande.<h2>Salvatorische Klausel</h2>Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf die Wirksamkeit der sonstigen Bestimmungen.
+    <h1>Sobald wir die häufigsten Fragen ermittelt haben, werden diese hier natürlich beantwortet</h1>
+
+
 
     <!-- Footer -->
-    <ng-include src="'templates/footer.html'"></ng-include>
-
+    <ng-include src="'templates/footer.php'"></ng-include>
 </body>
+
 </html>
