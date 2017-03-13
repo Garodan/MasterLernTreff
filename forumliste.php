@@ -46,7 +46,7 @@ $result = mysqli_query($connect, $query);
 
 </head>
 <body>
-  <ng-include src="'header.html'"></ng-include>
+  <ng-include src="'templates/header.html'"></ng-include>
 
   <br /><br />
   <div class="container">

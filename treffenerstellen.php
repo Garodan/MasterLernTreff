@@ -38,7 +38,8 @@
 </head>
 
 <body>
-  <ng-include src="'header.html'"></ng-include>
+    <!-- HEADER(Navbar) -->
+  <ng-include src="'templates/header.html'"></ng-include>
 
     <!-- Treffen erstellen FORM -->
     <div>
@@ -137,15 +138,10 @@
         </fieldset>
     </form>
 </div>
-            <!-- Footer-->
-<footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;">
-<p style="position: absolute; bottom: 0;"></p>
-</div>
-  <div class="container" style="width:500px;">
-    <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
-  </div>
-</footer>
+
+<!-- Footer-->
+<ng-include src="'templates/footer.html'"></ng-include>
+
 </body>
 </html>
 <script>

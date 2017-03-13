@@ -24,9 +24,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-<body>
-  <ng-include src="'header.html'"></ng-include>
 
+<body>
+  <!-- HEADER(Navbar) -->
+  <ng-include src="'templates/header.html'"></ng-include>
 
   <div class="container" style="width:500px;">
                   <h3 align="center">Forumbeitrag erstellen</h3>
@@ -40,20 +41,15 @@
                        <input type="submit" name="btnInsert" class="btn btn-info" ng-click="insertData()" value="Beitrag erstellen"/>
              </div>
 
-
-
-            <!-- Footer-->
-<footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;">
-<p style="position: absolute; bottom: 0;"></p>
-</div>
-  <div class="container" style="width:500px;">
-    <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
-  </div>
-</footer>
+<!-- TODO | CSS lässt den Footer ausblenden -->
+<!-- Footer -->
+<ng-include src="'templates/footer.html'"></ng-include>
 
 </body>
+
 </html>
+
+<!-- TODO | Externes Script -->
 <script>
 var app = angular.module("lerntreff",[]);
 app.controller("forumcontroller", function($scope, $http){

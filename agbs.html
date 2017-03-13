@@ -1,84 +1,54 @@
 <!DOCTYPE html>
-<html ng-app="lernTreff" lang="de">
+<html ng-app>
+
 <head>
-    <meta charset="utf-8">
+    <title>AGBs</title>
+    <meta charset="utf-8" lang="DE">
+
+    <!--viewport-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AGBs</title>
-
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/kalender.css" rel="stylesheet">
+    <!-- Navbar -->
     <link href="css/navbar.css" rel="stylesheet">
+    <!-- K.A. -->
+    <link href="css/indexmenu.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- Own Script -->
+    <!--script src="app.js"></script-->
+    <!-- kein Plan -->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <!-- kein Plan -->
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
 
 
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
 </head>
+
 <body>
 
-  <header>
-      <div class="navbar-wrapper">
-          <div class="container-fluid">
-              <nav class="navbar navbar-fixed-top">
-                  <div class="container">
-                      <div class="navbar-header">
-                          <a class="navbar-brand" href="startseite.html">LernTreff</a>
-                      </div>
-                      <div id="navbar" class="navbar-collapse collapse">
-                          <ul class="nav navbar-nav">
-                            <li class=" dropdown">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forum <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class=" dropdown">
-                                        <a href="forumerstellen.php">Forumsbeitrag erstellen</a>
-                                    </li>
-                                    <li><a href="forumliste.php">Forumsbeiträge</a></li>
-                                </ul>
-                            </li>
-                              <li class=" dropdown">
-                                  <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Treffen <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                      <li class=" dropdown">
-                                          <a href="treffenerstellen.php">Neues Treffen erstellen</a>
-                                      </li>
-                                      <li><a href="treffenliste.php">Liste der Treffen</a></li>
-                                  </ul>
-                              </li>
-                              <li class="active"><a href="kalender.html">Kalender</a></li>
-                          </ul>
-                          <ul class="nav navbar-nav pull-right">
-                              <li class=" dropdown">
-                                  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als  <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
+    <!-- HEADER(Navbar) -->
+    <ng-include src="'templates/header.html'"></ng-include>
 
-                                      <li><a href="#">Mein Profil</a></li>
-                                  </ul>
-                              </li>
-                              <li class=""><a href="index.html">Logout</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
-          </div>
-      </div>
-  </header>
+    <!-- TODO | muss noch in CSS geändert werden -->
+    </br>
+    </br>
 
-  <h1>Allgemeine Geschäftsbedingungen<h2>Vertragspartner</h2>Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und <br />LernTreff<br />Vertreten durch Can Kalkan<br />Adresse: Parchimer Allee 36/38  12359 Berlin<br />Tel: 0176/30674762<br />E-Mail-Adresse: s_kalkan@hwr-berlin.de<br /><br />Handelsregister: k.A<br />Handelsregisternummer: k.A<br />Umsatzsteuer-Identifikationsnummer: k.A<br /> , nachfolgend Anbieter genannt, der Vertrag zustande.<h2>Salvatorische Klausel</h2>Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf die Wirksamkeit der sonstigen Bestimmungen.
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-            <!-- Footer-->
-<footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;">
-<p style="position: absolute; bottom: 0;"></p>
-</div>
-  <div class="container" style="width:500px;">
-    <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
-  </div>
-</footer>
+    <!-- TODO | mit bootstrap schön machen -->
+    <h1>Allgemeine Geschäftsbedingungen<h2>Vertragspartner</h2>Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und <br />LernTreff<br />Vertreten durch Can Kalkan<br />Adresse: Parchimer Allee 36/38  12359 Berlin<br />Tel: 0176/30674762<br />E-Mail-Adresse: s_kalkan@hwr-berlin.de<br /><br />Handelsregister: k.A<br />Handelsregisternummer: k.A<br />Umsatzsteuer-Identifikationsnummer: k.A<br /> , nachfolgend Anbieter genannt, der Vertrag zustande.<h2>Salvatorische Klausel</h2>Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf die Wirksamkeit der sonstigen Bestimmungen.
+
+    <!-- Footer -->
+    <ng-include src="'templates/footer.html'"></ng-include>
+
 </body>
 </html>
