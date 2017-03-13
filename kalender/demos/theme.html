@@ -29,11 +29,12 @@
         <script src='../lib/moment.min.js'></script>
         <script src='../lib/jquery.min.js'></script>
         <script src='../fullcalendar.min.js'></script>
+        <script type='text/javascript' src='../gcal.js'></script>
         <script>
 
             $(document).ready(function() {
-
                 $('#calendar').fullCalendar({
+                    googleCalendarApiKey: '<AIzaSyAUhuQyrM4p5T-OZp1k8iLcE9lilXy98QI>',
                     theme: true,
                     header: {
                         left: 'prev,next today',
@@ -45,55 +46,7 @@
                     editable: true,
                     eventLimit: true, // allow "more" link when too many events
                     events: [
-                        {
-                            title: 'Optimierungsverfahren',
-                            start: '2017-02-18'
-                        },
-                        {
-                            title: 'BWL',
-                            start: '2017-02-06'
-                        },
-                        {
-                            title: 'C++',
-                            start: '2017-02-23'
-                        },
-                        {
-                            title: 'SWE II',
-                            start: '2017-02-02'
-                        },
-                        {
-                            title: 'Lineare Algebra',
-                            start: '2017-02-14'
-                        },
-                        {
-                            title: 'Betriebssysteme',
-                            start: '2017-02-28'
-                        },
-                        {
-                            title: 'Lunch',
-                            start: '2016-12-12T12:00:00'
-                        },
-                        {
-                            title: 'Meeting',
-                            start: '2016-12-12T14:30:00'
-                        },
-                        {
-                            title: 'Happy Hour',
-                            start: '2016-12-12T17:30:00'
-                        },
-                        {
-                            title: 'Dinner',
-                            start: '2016-12-12T20:00:00'
-                        },
-                        {
-                            title: 'Birthday Party',
-                            start: '2016-12-13T07:00:00'
-                        },
-                        {
-                            title: 'Click for Google',
-                            url: 'http://google.com/',
-                            start: '2016-12-28'
-                        }
+                        googleCalendarId: '5quu0pm34r9f00tgkpmj6drmuo@group.calendar.google.com'
                     ]
                 });
 
