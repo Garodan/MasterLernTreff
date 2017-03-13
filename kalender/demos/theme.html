@@ -34,7 +34,7 @@
 
             $(document).ready(function() {
                 $('#calendar').fullCalendar({
-                    googleCalendarApiKey: '<AIzaSyAUhuQyrM4p5T-OZp1k8iLcE9lilXy98QI>',
+                    googleCalendarApiKey: 'AIzaSyAUhuQyrM4p5T-OZp1k8iLcE9lilXy98QI',
                     theme: true,
                     header: {
                         left: 'prev,next today',
@@ -45,9 +45,9 @@
                     navLinks: true, // can click day/week names to navigate views
                     editable: true,
                     eventLimit: true, // allow "more" link when too many events
-                    events: [
+                    events: {
                         googleCalendarId: '5quu0pm34r9f00tgkpmj6drmuo@group.calendar.google.com'
-                    ]
+                    }
                 });
 
             });
