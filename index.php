@@ -31,15 +31,9 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!--<script src="js/login.js"></script>-->
 
-            <!-- Footer-->
-<footer class="bs-footer" role="contentinfo">
-    <div style="position: relative; height: 300px;">
-<p style="position: absolute; bottom: 0;"></p>
-</div>
-  <div class="container" style="width:500px;">
-    <center> hwr-lerntreff.de <a href="impressum.html" target="_blank">Impressum</a> | <a href="agbs.html" target="_blank">AGBs</a> | <a href="faq.html" target="_blank">FAQ</a></center>
-  </div>
-</footer>
+
+            <!-- Footer -->
+            <ng-include src="'templates/footer.html'"></ng-include>
 </body>
 </html>
 
