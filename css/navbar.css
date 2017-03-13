@@ -1,19 +1,19 @@
 body{
-    background: #E13D4C;
+    background: #fffbf6;
 }
 .navbar, .dropdown-menu{
-background: #4f4f4f;
+background: #b71111;
 border: none;
 z-index: 99;
 }
 
 .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
   border-bottom: 3px solid transparent;
-  
+
 }
 .nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
   border-bottom: 3px solid transparent;
-  background: none;  
+  background: none;
 }
 .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
  color: #fff;
