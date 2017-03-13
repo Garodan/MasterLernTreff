@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app lang="DE">
     <head>
-        <meta charset="utf-8">
+        <meta charset='utf-8' lang="DE">
 
-        <!--viewport-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,16 +11,20 @@
         <link href="css/navbar.css" rel="stylesheet">
         <link href="css/indexmenu.css" rel="stylesheet">
         <title>LernTreff Kalender</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <link rel='stylesheet' href='css/jquery-ui.min.css' />
-        <link href='css/fullcalendar.min.css' rel='stylesheet' />
-        <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-        <script src='js/moment.min.js'></script>
-        <script src='js/jquery.min.js'></script>
-        <script src='js/fullcalendar.min.js'></script>
+
+
+        <link rel='stylesheet' href='../lib/cupertino/jquery-ui.min.css' />
+        <link href='../fullcalendar.min.css' rel='stylesheet' />
+        <link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' />
+        <script src='../lib/moment.min.js'></script>
+        <script src='../lib/jquery.min.js'></script>
+        <script src='../fullcalendar.min.js'></script>
         <script>
+
             $(document).ready(function() {
 
                 $('#calendar').fullCalendar({
@@ -31,7 +34,7 @@
                         center: 'title',
                         right: 'month,agendaWeek,agendaDay,listMonth'
                     },
-                    defaultDate: '2017-02-18',
+                    defaultDate: '2017-03-18',
                     navLinks: true, // can click day/week names to navigate views
                     editable: true,
                     eventLimit: true, // allow "more" link when too many events
@@ -45,12 +48,10 @@
                             start: '2017-02-06'
                         },
                         {
-                            id: 999,
                             title: 'C++',
                             start: '2017-02-23'
                         },
                         {
-                            id: 999,
                             title: 'SWE II',
                             start: '2017-02-02'
                         },
@@ -96,7 +97,7 @@
         <style>
 
             body {
-                margin: 100px 0px;
+                margin: 40px 10px;
                 padding: 0;
                 font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
                 font-size: 14px;
@@ -106,13 +107,12 @@
                 max-width: 900px;
                 margin: 0 auto;
             }
+
         </style>
     </head>
     <body>
-        <ng-include src="'header.html'"></ng-include>
+        <ng-include src="'../../../../header.html"></ng-include>
         <div id='calendar'></div>
-        <ng-include src="'footer.html'"></ng-include>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-
+        <ng-include src="'../../../../footer.html'"></ng-include>
     </body>
 </html>
