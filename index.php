@@ -7,7 +7,7 @@
 
 <!-- Style -->
 <link href="css/login.css" rel="stylesheet">
-
+<link href="css/login2.css" rel="stylesheet">
 
 
 </head>
@@ -15,6 +15,7 @@
 <body>
 
 <div class="wrapper">
+  <div id="login-box">
   <form class="login" action="" method="POST">
     <p class="title">Einloggen</p>
      <input type="text" placeholder="Benutzername" name="usr" id="username"/>
@@ -28,9 +29,11 @@
     </button>
   </form>
 </div>
+</div>
+<div id="particles-js"></div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <!--<script src="js/login.js"></script>-->
-
+        <script src="js/login2.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
             <!-- Footer -->
             <ng-include src="'templates/footer.php'"></ng-include>
