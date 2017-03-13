@@ -2,11 +2,11 @@
 
 .center-menu{float:none;}
 .center-menu ul{width:100%; padding-left:0;}
-.center-menu ul li{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
-font-family:"open sans", serif ;
-   font-size:12px;}
+.center-menu ul li{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px;
+font-family:sans-serif;
+   font-size:14px;}
 
-.center-menu ul li i{font-size:10px; color:#ccc; padding-right:5px;} 
+.center-menu ul li i{font-size:10px; color:#ccc; padding-right:5px;}
 .center-menu ul li a{color:#4f4f4f; display:block; text-decoration:none; width:100%;}
 
 .center-menu ul li:nth-child(1){border-right: 5px solid #8d54a3}
@@ -57,6 +57,6 @@ font-family:"open sans", serif ;
 
 .text {width:100%; padding-left:0;}
 
-.text p{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px; 
+.text p{width:100%; min-height:30px; margin-bottom:2px; background:#f4f4f4; list-style:none; padding:10px;
 font-family:"open sans", serif ;
    font-size:12px;}

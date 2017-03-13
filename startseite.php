@@ -50,16 +50,16 @@
             <div class="col-md-3">
                 <span class="center-menu">
                     <ul>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Allgemein Fachbereich 2</a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Bank </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Bauwesen </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Dienstleistungen </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Elektrotechnik </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Handel </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Immobilien </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Industrie </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Informatik </a></li>
-                        <li><a href=""><i class="glyphicon glyphicon-chevron-right"></i> Maschinenbau </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Allgemein Fachbereich 2</a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Bank </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Bauwesen </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Dienstleistungen </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Elektrotechnik </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Handel </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Immobilien </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Industrie </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Informatik </a></li>
+                        <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Maschinenbau </a></li>
                     </ul>
                 <span>
             </div>
