@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="de" ng-app>
 <?php
-session_start(true);
+session_start(true); 
 $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
-$row2=$_SESSION['row1'];
-$name = $row2['name'];
-echo $name;
+$name = $_SESSION['name'];
 $test='"';
 
 $query1 = "SELECT * FROM userliste WHERE username=$test$name$test ORDER BY username DESC";
@@ -181,7 +179,7 @@ $_SESSION['row1'] = $row2;
   <label class="col-md-4 control-label" ></label>  
   <div class="col-md-4">
   <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span> Aktualisieren</a>
-  <button class="btn btn-danger" onClick="history.go(0)" type="button" value="refresh"><span class="glyphicon glyphicon-remove-sign"></span> Rückgängig</a>
+  <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove-sign"></span> Rückgängig</a>
     
   </div>
 </div>
@@ -207,15 +205,15 @@ $_SESSION['row1'] = $row2;
 
 </html>
 <?php
-if(isset($_POST))
+if(isset($_POST['name2'])||isset($_POST['Gender'])||isset($_POST['studiengang'])||isset($_POST['email'])||isset($_POST['matnr'])||isset($_POST['beschreibung']))
 {
   $name = $_SESSION['name'];
-  if($_POST['name2']!="") {$name2 = $_POST['name2'];} else {$name2 = "Name";}
-  if($_POST['Gender']!="") {$geschlecht = $_POST['Gender'];} else {$geschlecht = "1";}
-  if($_POST['studiengang']!="") {$studiengang = $_POST['studiengang'];} else {$studiengang = "Studiengang";}
-  if($_POST['email']!="") {$email = $_POST['email'];} else {$email = "Email";}
-  if($_POST['matnr']!="") {$matrikelnummer = $_POST['matnr'];} else {$matrikelnummer = "0";}
-  if($_POST['beschreibung']!="") {$text = $_POST['beschreibung'];} else {$text = "Schreib hier etwas über dich :D";}
+  if($_POST['name2']!="") {$name2 = $_POST['name2'];} else {$name2 = $row2['name'];}
+  if($_POST['Gender']!="") {$geschlecht = $_POST['Gender'];} else {$geschlecht = $row2['geschlecht'];}
+  if($_POST['studiengang']!="") {$studiengang = $_POST['studiengang'];} else {$studiengang = $row2['studiengang'];}
+  if($_POST['email']!="") {$email = $_POST['email'];} else {$email = $row2['email'];}
+  if($_POST['matnr']!="") {$matrikelnummer = $_POST['matnr'];} else {$matrikelnummer = $row2['matrikelnummer'];}
+  if($_POST['beschreibung']!="") {$text = $_POST['beschreibung'];} else {$text = $row2['text'];}
   $test='"';
   $eintrag= "UPDATE userliste SET name=$test$name2$test,geschlecht=$test$geschlecht$test,studiengang=$test$studiengang$test,email=$test$email$test,matrikelnummer=$test$matrikelnummer$test,text=$test$text$test WHERE username=$test$name$test";
   //$eintrag = "UPDATE userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
