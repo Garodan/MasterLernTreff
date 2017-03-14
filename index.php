@@ -41,6 +41,7 @@
 </html>
 
 <?php
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 session_start(true);
 $first;
 if(isset($_POST['usr']))
@@ -58,6 +59,26 @@ if(isset($result->{"session"}))
 {
 $name = $result->{"user"};
 $_SESSION['name'] = $name;
+$test='"';
+$query1 = "SELECT * FROM userliste WHERE username=$test$name$test ORDER BY username DESC";
+$result1 = mysqli_query($connect, $query1);
+$row1 = mysqli_fetch_array($result1);
+$_SESSION['row1'] = $row1;
+if(isset($row1['username']))
+{
+
+}
+else
+{
+  $name2 = "Name";
+  $geschlecht = 1;
+  $studiengang = "Studiengang";
+  $email = "Email Adresse";
+  $matrikelnummer = "Matrikelnummer";
+  $text = "Schreib hier etwas über dich :D";
+ $eintrag = "INSERT INTO userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
+ $eintragen = mysqli_query($connect, $eintrag);
+}
 header ( 'Location: startseite.php' );
 }
 else

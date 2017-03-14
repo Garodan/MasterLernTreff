@@ -33,7 +33,7 @@
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als <?php session_start(true); echo($_SESSION['name']); ?> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="#">Mein Profil</a></li>
+                                    <li><a href="profil.php">Mein Profil</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="index.php">Logout</a></li>
