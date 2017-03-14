@@ -95,14 +95,15 @@
             </div>
         </div> -->
 
-        <!-- Upload Finished || muss noch gemacht werden
+        <Upload Finished || muss noch gemacht werden
           <div class="js-upload-finished">
             <h3>Processed files</h3>
             <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+              <!--a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a> -->
+              <div><output id="list"></output></div>
             </div>
-          </div> -->
+          </div>
         </div>
         </div>
         </div>
