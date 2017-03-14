@@ -77,7 +77,7 @@ $_SESSION['row1'] = $row2;
    <div class="container">
 <div class="row">
 <div class="col-md-10 ">
-<form class="form-horizontal" action="" method="POST">
+<form class="form-horizontal" action="" method="POST" onSubmit="window.location.reload()">
 <fieldset>
 
 <!-- Form Name -->
@@ -175,14 +175,15 @@ $_SESSION['row1'] = $row2;
 </div>
 
 
-<div class="form-group">
+<div ng-controller="MyCtrl" class="form-group">
   <label class="col-md-4 control-label" ></label>  
-  <div class="col-md-4">
-  <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span> Aktualisieren</a>
+  <div class="col-md-4" >
+  <button class="btn btn-success" type="submit" ng-click="reloadPage()"><span class="glyphicon glyphicon-thumbs-up"></span> Aktualisieren</a></button>
   <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove-sign"></span> Rückgängig</a>
     
   </div>
 </div>
+
 
 </fieldset>
 </form>
@@ -201,6 +202,8 @@ $_SESSION['row1'] = $row2;
     <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Footer -->
     <ng-include src="'templates/footer.php'"></ng-include>
+
+  
 </body>
 
 </html>
@@ -220,3 +223,10 @@ if(isset($_POST['name2'])||isset($_POST['Gender'])||isset($_POST['studiengang'])
   $eintragen = mysqli_query($connect, $eintrag);
 }
 ?>
+    <script>
+    var myApp = angular.module('myApp',[]);
+
+  function MyCtrl($scope) {
+    $scope.reloadPage = function(){window.location.reload();}
+}
+</script>
