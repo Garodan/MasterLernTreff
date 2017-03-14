@@ -1,0 +1,1 @@
+SELECT * FROM userliste WHERE username="s_schenker" ORDER BY username DESC

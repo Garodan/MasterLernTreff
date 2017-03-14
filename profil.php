@@ -39,11 +39,12 @@ $_SESSION['row1'] = $row2;
     <link href="css/indexmenu.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-    body {
+    #body {
+        background: #bcd5d1;
+        background-color: #bcd5d1;
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-
     .othertop{margin-top:10px;}
     </style>
 
@@ -70,7 +71,7 @@ $_SESSION['row1'] = $row2;
     <script src="js/upload.js"></script>
 </head>
 
-<body>
+<body id="body">
 <!-- HEADER(Navbar) -->
     <ng-include src="'templates/header.php'"></ng-include>
 
