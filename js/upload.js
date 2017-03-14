@@ -9,6 +9,14 @@ $( document ).ready(function() {
 
     var startUpload = function(files) {
         console.log(files)
+        var gewaehlteDatei = files;
+        var output = [];
+        for (var i = 0, f; f=gewaehlteDatei[i]; i++){
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a',
+            ') - ', f.size, ' bytes, last modified: ', f.lastModifiedDate.toLocaleDateString(),
+            '</li>');
+          }
+          document.getElementById('list').innerHTML='<ul>' + output.join('') + '</ul>';
     }
 
     uploadForm.addEventListener('submit', function(e) {
@@ -21,14 +29,7 @@ $( document ).ready(function() {
     dropZone.ondrop = function(e) {
         e.preventDefault();
         this.className = 'upload-drop-zone';
-        var gewaehlteDatei = e.dataTransfer.files;
-        var output = [];
-        for (var i = 0, f; f=gewaehlteDatei[i]; i++){
-            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a',
-            ') - ', f.size, ' bytes, last modified: ', f.lastModifiedDate.toLocaleDateString(),
-            '</li>');
-          }
-          document.getElementById('list').innerHTML='<ul>' + output.join('') + '</ul>';
+
         startUpload(e.dataTransfer.files)
     }
 
