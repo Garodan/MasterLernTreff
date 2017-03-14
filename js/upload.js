@@ -15,7 +15,6 @@ $( document ).ready(function() {
         }
         document.getElementById('list').innerHTML=output.join('');
         console.log(files)
-
     }
 
     uploadForm.addEventListener('submit', function(e) {
