@@ -8,7 +8,14 @@ $( document ).ready(function() {
     var uploadForm = document.getElementById('js-upload-form');
 
     var startUpload = function(files) {
+      var gewaehlteDatei = files;
+      var output = [];
+      for (var i = 0, f; f=gewaehlteDatei[i]; i++){
+          output.push('<a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>', escape(f.name), '</a>');
+        }
+        document.getElementById('list').innerHTML=output.join('');
         console.log(files)
+
     }
 
     uploadForm.addEventListener('submit', function(e) {
@@ -21,14 +28,7 @@ $( document ).ready(function() {
     dropZone.ondrop = function(e) {
         e.preventDefault();
         this.className = 'upload-drop-zone';
-        var gewaehlteDatei = e.dataTransfer.files;
-        var output = [];
-        for (var i = 0, f; f=gewaehlteDatei[i]; i++){
-            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a',
-            ') - ', f.size, ' bytes, last modified: ', f.lastModifiedDate.toLocaleDateString(),
-            '</li>');
-          }
-          document.getElementById('list').innerHTML='<ul>' + output.join('') + '</ul>';
+
         startUpload(e.dataTransfer.files)
     }
 
