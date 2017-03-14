@@ -3,6 +3,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-fixed-top">
                 <div class="container">
+                     <div class="navbar-brand">
+                        <a href="startseite.php"><img src="../../img/LernTreff_3.svg" id="Logo1"/></a>
+                    </div>
                     <div class="navbar-header">
                         <a class="navbar-brand" href="../../startseite.php">LernTreff</a>
                     </div>
@@ -30,13 +33,13 @@
                         </ul>
                         <ul class="nav navbar-nav pull-right">
                             <li class=" dropdown">
-                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als  <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eingeloggt als <?php session_start(true); echo($_SESSION['name']); ?> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="#">Mein Profil</a></li>
+                                    <li><a href="../../profil.php">Mein Profil</a></li>
                                 </ul>
                             </li>
-                            <li class="#"><a href="index.php">Logout</a></li>
+                            <li class="#"><a href="../../index.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>

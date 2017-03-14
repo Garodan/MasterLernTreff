@@ -40,7 +40,7 @@ $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 
 <body>
   <!-- Header(Navbar) -->
-  <ng-include src="'templates/header.html'"></ng-include>
+  <ng-include src="'templates/header.php'"></ng-include>
 
   <div class="container">
     <h2 align="center">Liste der aktuellen Treffen</h2>
@@ -283,7 +283,7 @@ while ($row6 = mysqli_fetch_array($result6))
         </div>
     </div>
 <!-- Footer-->
-<ng-include src= "'templates/footer.html'"></ng-include>
+<ng-include src= "'templates/footer.php'"></ng-include>
 </body>
 </html>
 <script>
