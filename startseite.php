@@ -95,7 +95,7 @@
             </div>
         </div> -->
 
-        <Upload Finished || muss noch gemacht werden
+        <!--Upload Finished || muss noch gemacht werden-->
           <div class="js-upload-finished">
             <h3>Processed files</h3>
             <div class="list-group">
