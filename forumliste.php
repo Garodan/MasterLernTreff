@@ -5,7 +5,7 @@ $result = mysqli_query($connect, $query);
 ?>
 
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='lerntreff'>
 
 <head>
   <title>LernTreff Forum</title>

@@ -3,7 +3,7 @@ $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 ?>
 
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='lerntreff'>
 <head>
   <title>LernTreff Treffen erstellen</title>
   <meta charset="utf-8" lang="DE">

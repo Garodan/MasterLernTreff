@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="lerntreff">
+<html ng-app='lerntreff'>
 
 <head>
   <meta charset="utf-8" lang="DE">
@@ -55,7 +55,7 @@
 
 <!-- TODO | Externes Script -->
 <script>
-var app = angular.module("lerntreff",[]);
+var app = angular.module('lerntreff',[]);
 app.controller("forumcontroller", function($scope, $http){
      $scope.insertData = function(){
           $http.post(
@@ -63,6 +63,7 @@ app.controller("forumcontroller", function($scope, $http){
                {'thema':$scope.thema, 'beitrag':$scope.beitrag}
           ).success(function(data){
                alert(data);
+               alert("Hallo");
                $scope.thema = null;
                $scope.beitrag = null;
           });

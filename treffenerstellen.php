@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='lerntreff'>
     <head>
         <title>LernTreff Treffen erstellen</title>
         <meta charset="utf-8" lang="DE">
@@ -145,4 +145,3 @@
         <script src="js/app.js"></script>
     </body>
 </html>
-
