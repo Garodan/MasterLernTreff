@@ -3,6 +3,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-fixed-top">
                 <div class="container">
+                    <div class="navbar-brand">
+                        <a href="startseite.php"><img src="img/LernTreff_3.svg"/></a>
+                    </div>
                     <div class="navbar-header">
                         <a class="navbar-brand" href="startseite.php">LernTreff</a>
                     </div>
