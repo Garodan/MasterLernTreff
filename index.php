@@ -74,7 +74,7 @@ else
   $geschlecht = 1;
   $studiengang = "Studiengang";
   $email = "Email Adresse";
-  $matrikelnummer = "Matrikelnummer";
+  $matrikelnummer = "0";
   $text = "Schreib hier etwas über dich :D";
  $eintrag = "INSERT INTO userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
  $eintragen = mysqli_query($connect, $eintrag);

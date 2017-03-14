@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="de" ng-app>
 <?php
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 session_start(true);
 $row2=$_SESSION['row1'];
+$name = $row2['name'];
+$test='"';
+$query1 = "SELECT * FROM userliste WHERE username=$test$name$test ORDER BY username DESC";
+$result1 = mysqli_query($connect, $query1);
+$row1 = mysqli_fetch_array($result1);
+$_SESSION['row1'] = $row1;
+file_put_contents ( "test.txt" , $_SESSION['row1'] );
 ?>
 
 <head>
@@ -84,7 +92,7 @@ $row2=$_SESSION['row1'];
         <i class="fa fa-user">
         </i>
        </div>
-       <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="<?php echo $row2['name'];?>" class="form-control input-md">
+       <input id="Name (Full name)" name="name2" type="text" placeholder="<?php echo $row2['name'];?>" class="form-control input-md">
       </div>
   </div>  
 </div>
@@ -118,7 +126,7 @@ $row2=$_SESSION['row1'];
      <i class="fa fa-briefcase"></i>
         
        </div>
-      <input id="Primary Occupation" name="Primary Occupation" type="text" placeholder="<?php echo $row2['studiengang'];?>" class="form-control input-md">
+      <input id="Primary Occupation" name="studiengang" type="text" placeholder="<?php echo $row2['studiengang'];?>" class="form-control input-md">
       </div>
   
     
@@ -134,7 +142,7 @@ $row2=$_SESSION['row1'];
      <i class="fa fa-envelope-o"></i>
         
        </div>
-    <input id="Email Address" name="Email Address" type="text" placeholder="<?php echo $row2['email'];?>" class="form-control input-md">
+    <input id="Email Address" name="email" type="text" placeholder="<?php echo $row2['email'];?>" class="form-control input-md">
     
       </div>
   
@@ -150,7 +158,7 @@ $row2=$_SESSION['row1'];
      <i class="fa fa-sticky-note-o"></i>
         
        </div>
-   <input id="License No." name="License No." type="text" placeholder="<?php echo $row2['matrikelnummer'];?>" class="form-control input-md">
+   <input id="License No." name="matnr" type="text" placeholder="<?php echo $row2['matrikelnummer'];?>" class="form-control input-md">
     
       </div>
  
@@ -162,7 +170,7 @@ $row2=$_SESSION['row1'];
 <div class="form-group">
   <label class="col-md-4 control-label" for="Overview (max 200 words)">Über dich: (max 200 Wörter)</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)"><?php echo $row2['text'];?></textarea>
+    <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="beschreibung"><?php echo $row2['text'];?></textarea>
   </div>
 </div>
 
@@ -170,8 +178,8 @@ $row2=$_SESSION['row1'];
 <div class="form-group">
   <label class="col-md-4 control-label" ></label>  
   <div class="col-md-4">
-  <a href="#" class="btn btn-success" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span> Aktualisieren</a>
-  <a href="#" class="btn btn-danger" onClick="history.go(0)" type="button" value="refresh"><span class="glyphicon glyphicon-remove-sign"></span> Rückgängig</a>
+  <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span> Aktualisieren</a>
+  <button class="btn btn-danger" onClick="history.go(0)" type="button" value="refresh"><span class="glyphicon glyphicon-remove-sign"></span> Rückgängig</a>
     
   </div>
 </div>
@@ -197,16 +205,18 @@ $row2=$_SESSION['row1'];
 
 </html>
 <?php
-if(isset($_POST['Name (Full name)']))
+if(isset($_POST))
 {
   $name = $_SESSION['name'];
-  $name2 = $_POST['Name (Full name)'];
-  $geschlecht = $_POST['Gender'];
-  $studiengang = $_POST['Primary Occupation'];
-  $email = $_POST['Email Address'];
-  $matrikelnummer = $_POST['License No.'];
-  $text = $_POST['Overview (max 200 words)'];
-  $eintrag = "INSERT INTO userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
+  if($_POST['name2']!="") {$name2 = $_POST['name2'];} else {$name2 = "Name";}
+  if($_POST['Gender']!="") {$geschlecht = $_POST['Gender'];} else {$geschlecht = "1";}
+  if($_POST['studiengang']!="") {$studiengang = $_POST['studiengang'];} else {$studiengang = "Studiengang";}
+  if($_POST['email']!="") {$email = $_POST['email'];} else {$email = "Email";}
+  if($_POST['matnr']!="") {$matrikelnummer = $_POST['matnr'];} else {$matrikelnummer = "0";}
+  if($_POST['beschreibung']!="") {$text = $_POST['beschreibung'];} else {$beschreibung = "Schreib hier etwas über dich :D";}
+  $test='"';
+  $eintrag= "UPDATE userliste SET name=$test$name2$test,geschlecht=$test$geschlecht$test,studiengang=$test$studiengang$test,email=$test$email$test,matrikelnummer=$test$matrikelnummer$test,text=$test$text$test WHERE username=$test$name$test";
+  //$eintrag = "UPDATE userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
   $eintragen = mysqli_query($connect, $eintrag);
 }
 ?>
