@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="de" ng-app>
 <?php
-$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 session_start(true);
+$connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 $row2=$_SESSION['row1'];
 $name = $row2['name'];
+echo $name;
 $test='"';
+
 $query1 = "SELECT * FROM userliste WHERE username=$test$name$test ORDER BY username DESC";
+file_put_contents("text.txt", $query1);
 $result1 = mysqli_query($connect, $query1);
-$row1 = mysqli_fetch_array($result1);
-$_SESSION['row1'] = $row1;
-file_put_contents ( "test.txt" , $_SESSION['row1'] );
+$row2 = mysqli_fetch_array($result1);
+$_SESSION['row1'] = $row2;
 ?>
 
 <head>
@@ -213,7 +215,7 @@ if(isset($_POST))
   if($_POST['studiengang']!="") {$studiengang = $_POST['studiengang'];} else {$studiengang = "Studiengang";}
   if($_POST['email']!="") {$email = $_POST['email'];} else {$email = "Email";}
   if($_POST['matnr']!="") {$matrikelnummer = $_POST['matnr'];} else {$matrikelnummer = "0";}
-  if($_POST['beschreibung']!="") {$text = $_POST['beschreibung'];} else {$beschreibung = "Schreib hier etwas über dich :D";}
+  if($_POST['beschreibung']!="") {$text = $_POST['beschreibung'];} else {$text = "Schreib hier etwas über dich :D";}
   $test='"';
   $eintrag= "UPDATE userliste SET name=$test$name2$test,geschlecht=$test$geschlecht$test,studiengang=$test$studiengang$test,email=$test$email$test,matrikelnummer=$test$matrikelnummer$test,text=$test$text$test WHERE username=$test$name$test";
   //$eintrag = "UPDATE userliste (username,name,geschlecht,studiengang,email,matrikelnummer,text) VALUES ('$name','$name2','$geschlecht','$studiengang','$email','$matrikelnummer','$text')";
