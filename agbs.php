@@ -15,8 +15,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Navbar -->
     <link href="css/navbar.css" rel="stylesheet">
-    <!-- K.A. -->
-    <link href="css/indexmenu.css" rel="stylesheet">
 
     <!-- Scripts -->
     <!-- Angularjs -->

@@ -43,6 +43,12 @@ $result = mysqli_query($connect, $query);
   <!-- Forumliste Anzeige -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
 
+<style>
+#comment .button{
+
+}
+</style>
+
 
 </head>
 <body>
@@ -60,6 +66,7 @@ $result = mysqli_query($connect, $query);
                            <th data-column-id="thema">Thema</th>
                            <th data-column-id="beitrag">Beitrag</th>
                            <th data-column-id="userID">Ersteller</th>
+                           <th>Kommentieren</th>
                       </tr>
                  </thead>
                  <tbody>
@@ -72,6 +79,7 @@ $result = mysqli_query($connect, $query);
                            <td>'.$row["thema_forum"].'</td>
                            <td>'.$row["beitrag_forum"].'</td>
                            <td>'.$row["userID"].'</td>
+                           <td>'.$row<button id="comment">asd</button>'</td>
                       </tr>
                       ';
                  }
