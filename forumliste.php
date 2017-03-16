@@ -2,6 +2,8 @@
 $connect = mysqli_connect("localhost", "root", "", "lerntreff_db");
 $query ="SELECT * FROM forumeintraege ORDER BY ID DESC";
 $result = mysqli_query($connect, $query);
+$query2 ="SELECT * FROM kommentare ORDER BY ID DESC";
+$result2 = mysqli_query($connect, $query2);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,8 @@ $result = mysqli_query($connect, $query);
   <link href="css/indexmenu.css" rel="stylesheet">
   <!-- Forumliste Anzeige -->
   <link rel="stylesheet" href="css/bootgrid.css" />
-
+  <link rel="stylesheet" href="css/forum.css" />
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <!-- Scripts -->
   <!-- Angularjs -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
@@ -43,49 +46,75 @@ $result = mysqli_query($connect, $query);
   <!-- Forumliste Anzeige -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
 
-<style>
-#comment .button{
-
-}
-</style>
-
-
 </head>
 <body>
   <ng-include src="'templates/header.php'"></ng-include>
 
   <br /><br />
   <div class="container">
-       <h3 align="center">Liste der Forumbeiträge</h3>
-       <br />
-       <div class="table-responsive">
-            <table id="beitraege_data" class="table table-striped table-bordered">
-                 <thead>
-                      <tr>
-                           <th data-column-id="id" data-type="numeric">Beitragsnr.</th>
-                           <th data-column-id="thema">Thema</th>
-                           <th data-column-id="beitrag">Beitrag</th>
-                           <th data-column-id="userID">Ersteller</th>
-                           <th>Kommentieren</th>
-                      </tr>
-                 </thead>
-                 <tbody>
-                 <?php
+       <h3 align="center">Liste der Forumbeiträge</h3>      
+       <?php
                  while($row = mysqli_fetch_array($result))
                  {
                       echo '
-                      <tr>
-                           <td>'.$row["ID"].'</td>
-                           <td>'.$row["thema_forum"].'</td>
-                           <td>'.$row["beitrag_forum"].'</td>
-                           <td>'.$row["userID"].'</td>
-                           <td>'.$row<button id="comment">asd</button>'</td>
-                      </tr>
+                            <div class="col-sm-12">
+        <div class="panel panel-white post panel-shadow">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>'.$row["ID"].'</b></a>
+                        made a post.
+                    </div>
+                    <h6 class="text-muted time">not long ago</h6>
+                </div>
+            </div> 
+            <div class="post-description"> 
+                <p>'.$row["beitrag_forum"].'</p>
+                <div class="stats">
+                    
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="input-group"> 
+                    <input class="form-control" placeholder="Add a comment" type="text">
+                    <span class="input-group-addon">
+                        <a href="#"><i class="fa fa-edit"></i></a>  
+                    </span>
+                </div>
                       ';
+                while($row2 = mysqli_fetch_array($result2))
+                {
+                  if($row2["ForenID"]==$row["ID"])
+                  {
+                  echo '
+                        <ul class="comments-list">
+                    <li class="comment">
+                        <a class="pull-left" href="#">
+                            <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                        </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="user">'.$row2["Autor"].'</h4>
+                                <h5 class="time">not long ago</h5>
+                            </div>
+                            <p>'.$row2["Text"].'</p>
+                        </div>
+                        </li>
+                        </ul>
+                  ';
+                }
+                 }
+                 echo '
+                      </div>
+        </div>
+    </div>
+                 ';
                  }
                  ?>
-                 </tbody>
-            </table>
+                 </body>
        </div>
   </div>
 
