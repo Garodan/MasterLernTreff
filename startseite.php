@@ -58,11 +58,12 @@
           <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Handel </a></li>
           <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Immobilien </a></li>
           <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Industrie </a></li>
-          <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Informatik </a></li>
+          <li><a href="" id="infodata"><i class="fa fa-chevron-right" aria-hidden="true"></i> Informatik </a></li>
+          <div id="infoappend"></div>
           <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Maschinenbau </a></li>
         </ul>
         <span>
-        </div>
+    </div>
 
         <div class="col-md-9">
           <span class="text">
@@ -70,6 +71,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading"><strong>Dateien hochladen</strong></div>
                 <div class="panel-body">
+
 
                   <!-- Standar Form -->
                   <h4>Bitte wählen Sie eine Datei von ihrem Computer aus!</h4>
@@ -87,7 +89,21 @@
                   <div class="upload-drop-zone" id="drop-zone">
                     Ziehen Sie Ihre Datei in das Fenster.
                   </div>
-
+                  <div class="form-horizontal" >
+                    <div class="form-group">
+                      <label class="col-md-2 control-label">Studiengang</label>
+                      <div class="col-md-9">
+                        <select id="studiengang_treff" name="studiengang_treff" ng-model="studiengang" class="form-control">
+                          <option value="Industrielle Elektrotechnik">Industrielle Elektrotechnik</option>
+                          <option value="Bauingenieurwesen">Bauingenieurwesen</option>
+                          <option value="Konstruktion und Fertigung">Konstruktion und Fertigung</option>
+                          <option value="Technisches Facility Management">Technisches Facility Management</option>
+                          <option value="Informatik">Informatik</option>
+                          <option value="Wirtschaftsinformatik">Wirtschaftsinformatik</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   <div class="js-upload-finished">
                     <h3>Processed files</h3>
                     <div class="list-group" id="list">

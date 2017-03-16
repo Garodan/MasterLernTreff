@@ -1,6 +1,28 @@
 $( document ).ready(function() {
   'use strict';
 
+  var sperr = 0;
+
+  $("#infodata").on( "click", showData );
+
+  function showData(){
+    if (sperr == 0) {
+      $.ajax({
+        url: "php/databrowser.php"
+      })
+      .done(function( res ) {
+        document.getElementById('infoappend').innerHTML= res;
+      }).done(function(){
+        $("#infoappend").slideToggle();
+        sperr = 1;
+      });
+    }
+    else {
+      $("#infoappend").slideToggle();
+    }
+
+  }
+
   // UPLOAD CLASS DEFINITION
   // ======================
 
@@ -31,6 +53,7 @@ $( document ).ready(function() {
         alert("Ein Fehler ist aufgetreten!  ¯\\_(ツ)_/¯");
       }
     });
+    sperr = 0;
     console.log(files)
   }
 
@@ -57,5 +80,4 @@ $( document ).ready(function() {
     this.className = 'upload-drop-zone';
     return false;
   }
-
 });
